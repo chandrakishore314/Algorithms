@@ -1,0 +1,146 @@
+1. str1.replaceFirst("UserName",UserName)
+
+2.double randomDouble = Math.random(); 
+  // it will give 0 to 1 value
+
+3.If year mod 400 = 0, then leap year                    if    // is false then only elseif will work
+  if year mod 100 then normal year                    elseif
+  if year mod 4 then leap year
+  else normal year
+
+4. powerOfTwo = 2 * powerOfTwo;
+
+5.  harmonic += (float)1 / i; 
+
+6.   while (n%i == 0) {
+		            
+     System.out.print(i + " "); 
+           n /= i; 
+		            } 
+
+
+
+7.Gambler Game
+     Math.Random()>0.5;
+
+
+
+
+8.if(!b[value]){
+    distinct++;
+	b[value]=true;
+--------------------------------------------------------------------------------------------
+Hi,
+Please follow below steps. Open your Github => Open your Private Repository ==> Click on Setting ==> On left side Collaborators ==> add Kalpesh-Mali and bl-amruthasagar
+who already done just put msg Done
+Some Commonly used shortcuts
+9.  try {
+        
+        PrintWriter pw = new PrintWriter(System.out);
+        for(int i=0;i<row;i++) {
+     	   for(int j=0;j<column;j++) {	   
+   pw.println(array[i][j]);
+     	   }		
+     	}
+       
+  pw.close();
+	}
+	catch (Exception ex) {
+        ex.printStackTrace();
+     }
+	
+      	
+
+
+
+11.  double distance = Math.sqrt(x*x + y*y);
+
+----------------------------------------------------------------------------------------------------------------------
+1. A Number Divisible 1 and itself and withiin the Range O to that Number
+
+2. Insertion Sort - In this, the second element is compared with the first element and is swapped if it is not in order. Similarly, we take the third element in the next iteration and place it at the right place in the subarray of the first and second elements 
+
+
+3. Bubble Sort - It is a sorting algorithm in which two adjacent elements of an array are checked and swapped if they are in wrong order and this process is repeated until we get a sorted array.
+1st element with remaining
+2st element with remaining
+3st element with remaining
+4st element with remaining
+5st element with remaining
+6st element with remaining
+
+4. int num1=al2.get(i).byteValue();
+
+ 5.   reve= al.contains(reversed);
+6.  arr[j].compareTo(key)>0
+
+7.if(str1.equals(str[i])) {
+			flag=true;
+			break;
+		}
+
+
+------------------------------------------------------------------------------------------------------------------
+                     String st; 
+		  StringBuffer str=new StringBuffer();
+		  while ((st = br.readLine()) != null) {
+			  str.append(st);
+		  }
+		  String str1=str.toString();
+		  String[] arrSplit = str1.split(",");
+	
+
+
+----------------------------------------------------------------------------------------------------------------
+Hi,
+Please follow below steps. Open your Github => Open your Private Repository ==> Click on Setting ==> On left side Collaborators ==> add Kalpesh-Mali and bl-amruthasagar
+who already done just put msg Done
+Some Commonly used shortcuts
+
+1. Ctrl + Shift + o  // for organize imports
+
+2. Ctrl + Shift + R  // for finding any resource (file), including config XML files
+
+3. Ctrl + Shift + T   //for finding class even from jar
+
+4. Ctrl + Shift + ?   // Comment the block of code (/*  */)
+
+5. Ctrl + Shift + \   // Uncomment the block of code 
+
+6. Alt + Shift + R    // Rename the variable or file and update its occurrence
+
+7. Alt + Shift + L    // Extract code to local variable
+
+8. Alt + Shift + M    // Extract code to method
+
+9. Ctrl + Shift + F   // Format the code 
+
+10.Ctrl + D            // to delete a line
+
+11.CTRL + Shift+ G //  searches the workspace for references to the selected method or variable
+
+12. Alt + Shift + S // to get short for refactoring like generate getter and setter
+
+13. Alt + Shift + C // change method signature
+
+14 Ctrl + O // list all the methods and instance variable in the class
+---------------------------------------------------------------------------------------------------
+https://github.com/chandrakishore314/Algorithms.git
+
+git remote set-url origin https://github.com/chandrakishore314/Programms.git
+
+git remote set-url origin https://github.com/chandrakishore314/Algorithms.git
+
+git remote -v
+
+git push -u origin master 
+git add .
+    git commit -m "$*"
+    git push
+----------------------------------------------------------------------------------
+git init
+git add README.md
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/userName/repoName.git
+git push --force origin master
