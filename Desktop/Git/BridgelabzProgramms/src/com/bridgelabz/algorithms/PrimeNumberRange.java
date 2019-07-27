@@ -1,4 +1,4 @@
-package org.bridgelabz.algorithms;
+package com.bridgelabz.algorithms;
 import org.Bridgelbz.programms.Utility.algorithms.UtilityAlgorithms;
 
 import java.util.ArrayList;
@@ -36,15 +36,8 @@ boolean flag1 = false,flag2;
 			System.out.println(num1);
 			
 		}
-		
-		
-		
 	}
 }
-	
-	
-	 
-	 
 	}
 
 

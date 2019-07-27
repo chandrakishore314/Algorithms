@@ -1,4 +1,4 @@
-package org.bridgelabz.algorithms;
+package com.bridgelabz.algorithms;
 public class MaxValueNotes {
 
 	public static void main(String[] args) {

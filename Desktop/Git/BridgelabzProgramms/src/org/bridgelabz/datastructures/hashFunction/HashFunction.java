@@ -1,8 +1,10 @@
 package org.bridgelabz.datastructures.hashFunction;
 
 import java.io.IOException;
-import org.bridgelabz.algorithms.Bubblesort;
+
 import org.bridgelabz.datastructures.ordereslinkedlist.LinkedList;
+
+import com.bridgelabz.algorithms.Bubblesort;
 
 public class HashFunction {
 	public static void main(String[] args) throws IOException {
@@ -23,11 +25,12 @@ public class HashFunction {
 			}
 		}
 		for (int k = 0; k < 11; k++) {
+			if(hash[k]!=null) {
 
 			System.out.println(k + "-->");
 			hash[k].printLinkedList();
 			System.out.print(" ");
-		}
+		}}
 
 	}
 

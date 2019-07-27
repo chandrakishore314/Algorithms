@@ -1,4 +1,4 @@
-package org.bridgelabz.algorithms;
+package com.bridgelabz.algorithms;
 
 
 
