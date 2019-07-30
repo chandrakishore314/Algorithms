@@ -5,13 +5,26 @@ import java.util.Scanner;
 public class LeapYear {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
         System.out.print("Enter any year:");
         int year = s.nextInt();
-       
         boolean flag = false;
-        System.out.println("year as "+year % 4 );
+        flag= find(year);
+       
+                if(flag)
+        {
+            System.out.println("Year "+year+" is a Leap Year");
+        }
+        else
+        {
+            System.out.println("Year "+year+" is not a Leap Year");
+        }
+	}
+
+	public static boolean find(int year) {
+		// TODO Auto-generated method stub
+		boolean flag = false;
+       
         if(year % 400 == 0)
         {
             flag = true;
@@ -29,14 +42,9 @@ public class LeapYear {
         {
             flag = false;
         }
-        if(flag)
-        {
-            System.out.println("Year "+year+" is a Leap Year");
-        }
-        else
-        {
-            System.out.println("Year "+year+" is not a Leap Year");
-        }
+		return flag;
+        
+
 	}
 
 }
