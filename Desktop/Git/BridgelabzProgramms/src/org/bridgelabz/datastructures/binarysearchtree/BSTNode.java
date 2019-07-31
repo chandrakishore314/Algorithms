@@ -1,16 +1,13 @@
 package org.bridgelabz.datastructures.binarysearchtree;
 
 public class BSTNode {
-	BSTNode left = null;
-	BSTNode right = null;
+	BSTNode left ;
+	BSTNode right;
     int data = 0;
-    BSTNode(int data){
-    	data =this.data;
-    	right = null;
-    	left = null;
+  public  BSTNode(int data){
+    	 this.data=data;
+    	this.right = null;
+    	this.left = null;
     }
-	public BSTNode() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 }
