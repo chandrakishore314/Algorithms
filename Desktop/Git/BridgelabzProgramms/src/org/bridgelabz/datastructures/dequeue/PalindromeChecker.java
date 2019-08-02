@@ -1,9 +1,9 @@
 package org.bridgelabz.datastructures.dequeue;
 import java.util.Scanner;
 public class PalindromeChecker {
-
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("enter string");
 		String var ;
 		 var=sc.nextLine();
 		CustomDequeue<Character> cqueue = new CustomDequeue<Character>();

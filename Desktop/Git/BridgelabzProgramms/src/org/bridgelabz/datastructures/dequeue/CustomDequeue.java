@@ -1,5 +1,4 @@
 package org.bridgelabz.datastructures.dequeue;
-
 public class CustomDequeue<E> {
 	int count = 0;
 	NodeD<E> front;
@@ -33,7 +32,6 @@ public class CustomDequeue<E> {
 		}
 		count++;
 	}
-
 	E removeAtFront() {
 		E rmValue = null;
 		if (isEmpty()) {

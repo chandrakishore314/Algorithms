@@ -1,19 +1,16 @@
 package org.bridgelabz.datastructures.ordereslinkedlist;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-
 public class LinkedList {
 	 Node head = null;
-	Node tail = null;
-	static int length;
 
+	static int length;
 	public static void main(String[] args) throws IOException {
-		LinkedList linkedList=new LinkedList();
+		LinkedList linkedList = new LinkedList();
 		linkedList.fileInput();
 		linkedList.sort();
 		linkedList.printLinkedList();
@@ -29,12 +26,9 @@ public class LinkedList {
 			linkedList.append(searchNumber);
 			length = length + 1;
 			linkedList.sort();
-
 		}
 		linkedList.printList();
-
 	}
-
 	public static int[] fileInput() throws IOException {
 		File file = new File(
 				"H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\ordereslinkedlist\\Numbers.txt");
@@ -47,21 +41,22 @@ public class LinkedList {
 		String str1 = str.toString();
 		String[] arrSplit = str1.split(" ");
 		length = arrSplit.length;
-		int arr[]=new int[length];
+		int arr[] = new int[length];
+		LinkedList linkedList = new LinkedList();
 		for (int i = 0; i < length; i++) {
 			System.out.println(arrSplit[i]);
-			
-			//     append(Integer.parseInt(arrSplit[i]));
-			arr[i]=Integer.parseInt(arrSplit[i]);
+			linkedList.append(Integer.parseInt(arrSplit[i]));
+			arr[i] = Integer.parseInt(arrSplit[i]);
 		}
 		return arr;
 	}
 
-	public  void printList() throws IOException {
+	public void printList() throws IOException {
 		Node tnode = head;
 		FileWriter fw = new FileWriter(
-				"H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\ordereslinkedlist\\Numbers2.txt",true);
-	
+				"H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\ordereslinkedlist\\Numbers2.txt",
+				true);
+
 		while (tnode != null) {
 			fw.write(String.valueOf(tnode.data));
 			fw.write(" ");
@@ -72,7 +67,7 @@ public class LinkedList {
 		fw.close();
 	}
 
-	 public void printLinkedList() {
+	public void printLinkedList() {
 		Node tnode = head;
 		while (tnode != null) {
 			System.out.println(tnode.data + " ");
@@ -81,7 +76,7 @@ public class LinkedList {
 		}
 	}
 
-	private  void sort() {
+	private void sort() {
 		if (length > 1) {
 			for (int i = 0; i < length - 1; i++) {
 				Node currentNode = head;
@@ -99,7 +94,7 @@ public class LinkedList {
 		}
 	}
 
-	private  void pop(int position) {
+	private void pop(int position) {
 		if (head == null) {
 			return;
 		}
@@ -115,22 +110,23 @@ public class LinkedList {
 		temp.next = next;
 	}
 
-	public  void append(int new_data) {
+	public void append(int new_data) {
+
 		
-		Node new_node = new Node(new_data);
 		if (head == null) {
 			head = new Node(new_data);
 		} else {
+			Node new_node = new Node(new_data);
 			new_node.next = null;
 			Node last = head;
-			while (last.next != null)
-				last = last.next;
+			while (last.next != null) {
+				last = last.next;}
 			last.next = new_node;
 		}
 
 	}
 
-	private  int search(int searchNumber) {
+	private int search(int searchNumber) {
 		Node current = head;
 		int position = 0;
 		while (current != null) {

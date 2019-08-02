@@ -13,9 +13,8 @@ public class UnorderedLinkedList {
 	Node tail = null;
 
 	public static void main(String[] args) throws IOException {
-
-		File file = new File("H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\linkedlist\\UnorderedText");
-
+		File file = new File(
+				"H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\unorderedlinkedlist\\UnorderedText");
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String st;
 		StringBuffer str = new StringBuffer();
@@ -24,7 +23,7 @@ public class UnorderedLinkedList {
 		}
 		String str1 = str.toString();
 		String[] arrSplit = str1.split(" ");
-        for (int i = 0; i < arrSplit.length; i++) {
+		for (int i = 0; i < arrSplit.length; i++) {
 			append(arrSplit[i]);
 		}
 		System.out.println("enter word to search");
@@ -42,6 +41,7 @@ public class UnorderedLinkedList {
 		printList();
 
 	}
+
 	private static void pop(int position) {
 		if (head == null) {
 			return;
@@ -50,16 +50,17 @@ public class UnorderedLinkedList {
 		if (position == 0) {
 			head = temp.next;
 		}
-		for (int i = 0; temp != null && i < position - 1; i++)
+		for (int i = 0; temp != null && i < position - 1; i++) {
 			temp = temp.next;
 		if (temp == null || temp.next == null)
 			return;
-		Node next = temp.next.next;
-		temp.next = next;
-	}
+		Node replace = temp.next.next;
+		temp.next = replace;
+	}}
+
 	private static int search(String searchWord) {
 		Node current = head;
-		int position = 0;
+		int position = 1;
 		while (current != null) { // str2.equals(arrSplit[i])
 			if (searchWord.equals(current.data)) {
 				return position;
@@ -82,9 +83,11 @@ public class UnorderedLinkedList {
 			last.next = new_node;
 		}
 	}
+
 	public static void printList() throws IOException {
 		Node tnode = head;
-		FileWriter fw = new FileWriter("H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\linkedlist\\UnorderedText");
+		FileWriter fw = new FileWriter(
+				"H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\unorderedlinkedlist\\UnorderedText");
 		while (tnode != null) {
 			System.out.println(tnode.data + " ");
 			fw.write(tnode.data);

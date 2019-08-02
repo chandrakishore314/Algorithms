@@ -1,9 +1,6 @@
 package org.bridgelabz.datastructures.hashFunction;
-
 import java.io.IOException;
-
 import org.bridgelabz.datastructures.ordereslinkedlist.LinkedList;
-
 import com.bridgelabz.algorithms.Bubblesort;
 
 public class HashFunction {

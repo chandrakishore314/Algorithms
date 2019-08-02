@@ -1,11 +1,9 @@
 package org.bridgelabz.datastructures;
 import org.Bridgelbz.programms.functions.LeapYear;
 import com.bridgelabz.algorithms.DayOfWeek;
-
 public class Calender {
 
 	public static void main(String[] args) {
-
 		int month=Integer.parseInt(args[0]);
 		int year=Integer.parseInt(args[1]);
 	String []months= {"january","febrary","march","april","may","june","july","augustt","sept","october","nov","december"};
@@ -19,14 +17,10 @@ for(int i=0;i<=d;i++) {
 	System.out.print("  ");
 }
 for(int i=1;i<days[month];i++) {
-
 	System.out.print("  "+i);
 	if((i+d)%7==0|| (i == days[month])) {
 		System.out.println( );
 	}
 }
-
 	}
-
-
 }

@@ -33,7 +33,7 @@ public class UtilityPrimesDispaly {
 		ArrayList<Integer> notAnagram = new ArrayList<Integer>();
 		UtilityPrimesDispaly u = new UtilityPrimesDispaly();
 		for (int t = 0; t < primes.size(); t++) {
-			int num = primes.get(t).intValue();
+			int num = primes.get(t);
 			int rev = u.reverse(num);
 			if (primes.contains(rev)) {
 				anagram.add(num);

@@ -1,10 +1,7 @@
 package com.bridgelabz.algorithms;
-
 import java.util.Scanner;
-
 public class DayOfWeek {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 Scanner sc=new Scanner(System.in);
 System.out.println("enter the day");
 int d = sc.nextInt();

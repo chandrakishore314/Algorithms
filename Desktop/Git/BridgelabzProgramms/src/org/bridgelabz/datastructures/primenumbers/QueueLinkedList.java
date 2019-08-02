@@ -1,10 +1,8 @@
 package org.bridgelabz.datastructures.primenumbers;
 
-import java.util.Iterator;
-
 public class QueueLinkedList<T> {
 	Node<T> head;
-	static int current = 1;
+	int current = 0;
 	public void push(T data) {
 		Node<T> temp;
 		Node<T> node = new Node(data);
@@ -20,20 +18,26 @@ public class QueueLinkedList<T> {
 		}
 		current++;
 	}
+	public int size() {
+		return current;
+	}
+	public boolean isEmpty() {
+		boolean flag;
+		if (current == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	public T remove() {
+		if (isEmpty()) {
+			System.out.println("Underflow");
+		}
 		Node<T> temp = head;
-	
-		head=temp.next;
+		head = temp.next;
+		if (head == null) {
+			current--;
+		}
 		return temp.data;
 	}
-	public Node<T> removeObject() {
-		Node<T> temp = head;
-		
-		head=temp.next;
-		return temp.next;
-	}
-
-
-	
-
 }

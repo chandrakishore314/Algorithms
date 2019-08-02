@@ -1,10 +1,8 @@
 package org.bridgelabz.datastructures.binarysearchtree;
 
 import java.util.Scanner;
-
 public class BinarySearchTree {
-
-	public static void main(String[] args) {
+public static void main(String[] args) {
 Scanner scanner=new Scanner(System.in);
 System.out.println("enter size of array");
 int num=scanner.nextInt();

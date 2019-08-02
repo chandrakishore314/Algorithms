@@ -8,9 +8,9 @@ public class BinarySearchImplementation {
 	}
 
 	public static BSTNode add(BSTNode root, int data) {
-		
-		BSTNode bst = new BSTNode(data);
+
 		if (root == null) {
+			BSTNode bst = new BSTNode(data);
 			root = bst;
 			return root;
 		} else if (data < root.data) {

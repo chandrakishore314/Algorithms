@@ -4,6 +4,7 @@ public class BSTNode {
 	BSTNode left ;
 	BSTNode right;
     int data = 0;
+    
   public  BSTNode(int data){
     	 this.data=data;
     	this.right = null;
