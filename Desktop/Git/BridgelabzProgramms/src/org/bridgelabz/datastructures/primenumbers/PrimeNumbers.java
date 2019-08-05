@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.Bridgelbz.programms.Utility.algorithms.UtilityAlgorithms;
+import org.Bridgelbz.programms.Utility.dataStructures.StackLinkedList;
 
 public class PrimeNumbers {
 
@@ -16,7 +17,9 @@ public class PrimeNumbers {
 		
 		StackLinkedList s=new StackLinkedList();
 		System.out.println("enter your choice:(1)primes upto 1000 \n"
-				+ "(2)Anagrams upto 1000\n"+"(3)Using Stack Anagrams in reverse order");
+				+ "(2)Anagrams upto 1000\n"+
+				"(3)Using Stack Anagrams in reverse order\n"
+				+"(4)Using Stack Anagrams in reverse order\n");
 		Scanner scanner=new Scanner(System.in);
 		int num=scanner.nextInt();
 		switch(num) {

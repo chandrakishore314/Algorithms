@@ -2,6 +2,8 @@ package org.bridgelabz.datastructures.primenumbers;
 
 import java.util.ArrayList;
 
+import org.Bridgelbz.programms.Utility.dataStructures.StackLinkedList;
+
 public class UtilityPrimesDispaly {
 	void display(ArrayList<Integer> primes) {
 		int array[][] = new int[10][100];
@@ -53,7 +55,7 @@ public class UtilityPrimesDispaly {
 	}
 
 	public void pushToStack(ArrayList<Integer> anagram) {
-		StackLinkedList s = new StackLinkedList();
+		StackLinkedList<Integer> s = new StackLinkedList<Integer>();
 		for (int i = 0; i < anagram.size(); i++) {
 			s.push(anagram.get(i).intValue());
 		}

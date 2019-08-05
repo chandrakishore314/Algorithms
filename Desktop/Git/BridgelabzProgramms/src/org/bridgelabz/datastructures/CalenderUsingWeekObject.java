@@ -1,10 +1,8 @@
 package org.bridgelabz.datastructures;
 
+import org.Bridgelbz.programms.Utility.dataStructures.QueueLinkedList;
+import org.bridgelabz.algorithms.DayOfWeek;
 import org.Bridgelbz.programms.functions.LeapYear;
-import com.bridgelabz.algorithms.DayOfWeek;
-
-import org.bridgelabz.datastructures.primenumbers.Node;
-import org.bridgelabz.datastructures.primenumbers.QueueLinkedList;
 public class CalenderUsingWeekObject {
 	public static void main(String[] args) {
 		int month = Integer.parseInt(args[0]);
@@ -16,7 +14,7 @@ public class CalenderUsingWeekObject {
 			days[month] = 29;
 		}
 		System.out.println(months[month - 1] + " " + year);
-		System.out.println("S  M  T  W  Th  F  S ");
+		System.out.println("S    M   T   W    Th    F    S ");
 		int d = DayOfWeek.day(month, 1, year);
 		QueueLinkedList<QueueLinkedList<Integer>> q = new QueueLinkedList<QueueLinkedList<Integer>>();
 		QueueLinkedList<Integer> week = new QueueLinkedList<Integer>();
@@ -38,9 +36,9 @@ public class CalenderUsingWeekObject {
 			for (int j = 0; j < weeks.size(); j++) {
 				int k = weeks.remove();
 				if (k == 0)
-					System.out.print("  ");
+					System.out.print("    ");
 				else
-					System.out.print(k + "  ");
+					System.out.print(k+ "   ");
 			}
 			System.out.println();
 		}

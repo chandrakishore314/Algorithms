@@ -8,10 +8,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class UnorderedLinkedList {
-	static Node head = null;
-	Node tail = null;
+import org.Bridgelbz.programms.Utility.dataStructures.LinkedList;
 
+public class UnorderedLinkedList {
+	
+	
 	public static void main(String[] args) throws IOException {
 		File file = new File(
 				"H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\unorderedlinkedlist\\UnorderedText");
@@ -22,78 +23,26 @@ public class UnorderedLinkedList {
 			str.append(st);
 		}
 		String str1 = str.toString();
+		LinkedList<String> linkedList=new LinkedList<String>();
 		String[] arrSplit = str1.split(" ");
 		for (int i = 0; i < arrSplit.length; i++) {
-			append(arrSplit[i]);
+			linkedList.append(arrSplit[i]);
 		}
 		System.out.println("enter word to search");
 		Scanner sc = new Scanner(System.in);
 		String searchWord;
 		searchWord = sc.nextLine();
-		int flag = search(searchWord);
+		int flag = linkedList.search(searchWord);
 		System.out.println(flag);
 		if (flag > 0) {
 			System.out.println("word is found");
-			pop(flag);
+			linkedList.pop(flag);
 		} else {
-			append(searchWord);
+			linkedList.append(searchWord);
 		}
-		printList();
+		linkedList.printList("H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\ordereslinkedlist\\Numbers2.txt");
 
 	}
 
-	private static void pop(int position) {
-		if (head == null) {
-			return;
-		}
-		Node temp = head;
-		if (position == 0) {
-			head = temp.next;
-		}
-		for (int i = 0; temp != null && i < position - 1; i++) {
-			temp = temp.next;
-		if (temp == null || temp.next == null)
-			return;
-		Node replace = temp.next.next;
-		temp.next = replace;
-	}}
-
-	private static int search(String searchWord) {
-		Node current = head;
-		int position = 1;
-		while (current != null) { // str2.equals(arrSplit[i])
-			if (searchWord.equals(current.data)) {
-				return position;
-			}
-			position++;
-			current = current.next;
-		}
-		return 0;
-	}
-
-	private static void append(String new_data) {
-		Node new_node = new Node(new_data);
-		if (head == null) {
-			head = new Node(new_data);
-		} else {
-			new_node.next = null;
-			Node last = head;
-			while (last.next != null)
-				last = last.next;
-			last.next = new_node;
-		}
-	}
-
-	public static void printList() throws IOException {
-		Node tnode = head;
-		FileWriter fw = new FileWriter(
-				"H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\unorderedlinkedlist\\UnorderedText");
-		while (tnode != null) {
-			System.out.println(tnode.data + " ");
-			fw.write(tnode.data);
-			fw.write(" ");
-			tnode = tnode.next;
-		}
-		fw.close();
-	}
+	
 }

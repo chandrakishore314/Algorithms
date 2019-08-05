@@ -1,4 +1,5 @@
 package org.bridgelabz.datastructures.dequeue;
+import org.Bridgelbz.programms.Utility.dataStructures.DoubleLinkedList;
 import java.util.Scanner;
 public class PalindromeChecker {
 	public static void main(String[] args) {
@@ -6,7 +7,7 @@ public class PalindromeChecker {
 		System.out.println("enter string");
 		String var ;
 		 var=sc.nextLine();
-		CustomDequeue<Character> cqueue = new CustomDequeue<Character>();
+		 DoubleLinkedList<Character> cqueue = new DoubleLinkedList<Character>();
 		int length = var.length();
 		for (int i = 0; i < length; i++) {
 			char ch = var.charAt(i);

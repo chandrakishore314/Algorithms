@@ -1,11 +1,14 @@
 package org.bridgelabz.datastructures.stack;
+
+import org.Bridgelbz.programms.Utility.dataStructures.Stack;
+
 public class StackImplementation {
 	public static void main(String[] args) {
 
 		String str="(5+6)*(7+8)/(4+3)(5+6)*(7+8)/(4+3)";
 		char ch[]=str.toCharArray();
 		int length=ch.length;
-		StackMethods stack=new StackMethods(length);
+		Stack stack=new Stack(length);
 		for(int start=0;start<length;start++) {
 			if(ch[start]=='(') {
 				stack.push(ch[start]);}
@@ -15,7 +18,7 @@ public class StackImplementation {
 			else {
 			}
 		}
-		boolean flag=stack.isBalanced();
+		boolean flag=stack.isEmpty();
 		if(flag==true) {
 			System.out.println("paranthesis are balanced");
 		}else {
