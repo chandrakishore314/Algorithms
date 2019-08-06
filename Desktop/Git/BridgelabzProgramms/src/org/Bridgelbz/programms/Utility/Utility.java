@@ -2,12 +2,18 @@ package org.Bridgelbz.programms.Utility;
 
 import java.util.Scanner;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 public class Utility {
 
-	public static Scanner scanner() {
-		return new Scanner(System.in);
-		
-		
+	public static Scanner getScanner() {
+		Scanner scanner= new Scanner(System.in);
+		return scanner;
 	}
 
+	
+	public static ObjectMapper getObjectMapper() {
+	ObjectMapper objectMapper=new ObjectMapper();
+	return objectMapper;
+	}
 }

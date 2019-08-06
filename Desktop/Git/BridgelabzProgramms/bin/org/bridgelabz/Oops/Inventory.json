@@ -1,8 +1,1 @@
-
-{"Rice":[{"name":"Basmati","weight":10,"price":1000}],
-
-
-"wheat":[{"name":"Dry beans","weight":20,"price":1001}],
-
-"perals":[
-{"name":"anything","weight":50,"price":1002}]}
+[{"name":"Rice","weight":10,"price":2.0},{"name":"Wheat","weight":20,"price":3.0},{"name":"Perals","weight":12,"price":6.0},{"name":"Wheat","weight":2,"price":3.0}]

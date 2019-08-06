@@ -8,7 +8,7 @@ public class UserName {
 
 String str="Hello UserName, How are you?",UserName;
 System.out.println("enter username");
-UserName=Utility.scanner().nextLine();
+UserName=Utility.getScanner().nextLine();
 System.out.println(str.replaceFirst("UserName", UserName));
 
 	}

@@ -3,7 +3,7 @@ package org.Bridgelbz.programms.Utility.dataStructures;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class LinkedList<T extends Comparable<T>> {
+public class LinkedList<T extends  Comparable>  {
 	Node<T> head;
 	 int length=0;
 
@@ -21,6 +21,11 @@ public class LinkedList<T extends Comparable<T>> {
 		}
     length++;
 	}
+ 	
+ 	// length of linked list
+ 	int size() {
+ 		return length;
+ 	}
  	//Displaying the data
 public void printLinkedList() {
 	Node<T> tnode = head;

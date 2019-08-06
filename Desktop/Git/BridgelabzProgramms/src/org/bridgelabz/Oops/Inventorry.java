@@ -1,58 +1,26 @@
-package org.bridgelabz.Oops;
+package org.bridgelabz.oops;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.annotate.JsonProperty;
-
-@JsonIgnoreProperties
 public class Inventorry {
+	private String Name;
+	private double Price;
+	private long Weight;
 	
-
-	ArrayList<Rice> Rice;
-    ArrayList<String> Wheat;
-    ArrayList<String> Perals;
-	/*private String name;
-	private int weight;
-	private int price; 
 	public String getName() {
-		return name;
+		return Name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		Name = name;
 	}
-	public int getWeight() {
-		return weight;
+	public double getPrice() {
+		return Price;
 	}
-	public void setWeight(int weight) {
-		this.weight = weight;
+	public void setPrice(long price2) {
+		Price = price2;
 	}
-	public int getPrice() {
-		return price;
+	public long getWeight() {
+		return Weight;
 	}
-	public void setPrice(int price) {
-		this.price = price;
-	}*/
-	public ArrayList<org.bridgelabz.Oops.Rice> getRice() {
-		return Rice;
+	public void setWeight(long weight2) {
+		Weight = weight2;
 	}
-	public void setRice(ArrayList<org.bridgelabz.Oops.Rice> rice) {
-		Rice = rice;
-	}
-	public ArrayList<String> getWheat() {
-		return Wheat;
-	}
-	public void setWheat(ArrayList<String> wheat) {
-		Wheat = wheat;
-	}
-	public ArrayList<String> getPerals() {
-		return Perals;
-	}
-	public void setPerals(ArrayList<String> perals) {
-		Perals = perals;
-	}
-
-
 }
