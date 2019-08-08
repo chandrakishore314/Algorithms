@@ -7,7 +7,6 @@
 package org.bridgelabz.oops.stockreport;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,41 +17,56 @@ import org.codehaus.jackson.map.JsonMappingException;
 public class StocksList {
 
 	public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException {
-		 String stocknames;
-		 int numberofshare;
-		 long shareprice;
-		 
-		 List<StockBean> stockObject=new ArrayList<StockBean>();
-		 Scanner scanner=Utility.getScanner();
-		 System.out.println("enter number of stocks to enter");
-		 int number=scanner.nextInt();
-		 StockBean  stockbean=new  StockBean();
-		 for(int i=0;i<number;i++) {
-			 System.out.println("enter stockNames");
-			 stocknames=scanner.next();
-			
-			 System.out.println("enter numberofshare");
-			 numberofshare=scanner.nextInt();
-			
-			 System.out.println("enter shareprice");
-			 shareprice=scanner.nextLong();
-			 
-			 stockbean.setStocknames(stocknames);
-			 stockbean.setNumberofshare(numberofshare);
-			 stockbean.setShareprice(shareprice);
-			 stockObject.add(stockbean);			
-		 }
-		 StockImplementation stockImplementation=new StockImplementation();
-		 stockImplementation.addToJson(stockObject);
-		 
-		 long totalprice=0;
-		 List<StockBean> stockObjects= stockImplementation.readFromJson();
-		 for(StockBean stock:stockObjects) {
-			 System.out.println(stock.getStocknames()+" "+stock.getShareprice());
-			 totalprice=totalprice+stock.getShareprice();
-			 
-		 }
-		 System.out.println("Total Stock Value"+totalprice);
+		Scanner scanner = Utility.getScanner();
+		System.out.println("enter number of stocks to enter");
+		StockAccountExtension stock = new StockAccountExtension();
+		int num = scanner.nextInt();
+		List<StockBean> stockObject = stock.addStocks(num);
+
+		StockImplementation stockImplementation = new StockImplementation();
+		stockImplementation.addToJson(stockObject);
+
+		long totalprice = 0;
+		List<StockBean> stockObjects = stockImplementation.readFromJson();
+		for (StockBean stock1 : stockObjects) {
+			long value = stock1.getShareprice() * stock1.getNumberofshare();
+			System.out.println(stock1.getStocknames() + " " + value);
+			totalprice = totalprice + value;
+		}
+		System.out.println("Total Stock Value  " + totalprice);
+		int choice = 0;
+
+		while (true) {
+			System.out.println(" enter 1.To add new Account to File 2. To get value of any stock\n"
+					                + "3. To Buy    4. To sell  5. To save to File  6. To print Stock Report"
+					                + "7.Add the Transaction to json 8.. exit");
+			choice = scanner.nextInt();
+			switch (choice) {
+			case 1:
+				stockObjects = stock.addStocks(1);
+				break;
+			case 2:
+				stock.valueOf(stockObjects);
+				break;
+			case 3:
+				stock.buyStock(stockObjects);
+				break;
+			case 4:
+				stock.sellStock(stockObjects);
+				break;
+			case 5:
+				stockImplementation.addToJson(stockObjects);
+				break;
+			case 7:
+				stock.addTransactiontoJson();
+				break;
+			case 8:
+				System.exit(0);
+				break;
+			default:
+				System.out.println("enter valid between 0 - 7");
+				break;
+			}
+		}
 	}
-	
 }

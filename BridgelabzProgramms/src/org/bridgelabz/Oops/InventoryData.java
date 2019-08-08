@@ -47,9 +47,9 @@ public class InventoryData {
 		for (Inventorry inventories1 : jsonInventories) {
 			String jsonString = mapper.writeValueAsString(inventories1);
 			System.out.println(jsonString);
-
-			System.out.println(inventories1.getName() + " " + inventories1.getPrice());
-			totalValue = (long) (totalValue + inventories1.getPrice());
+long value=(long) (inventories1.getWeight()*inventories1.getPrice());
+			System.out.println(inventories1.getName() + " inventory value is " + value);
+			totalValue = (totalValue + value);
 		}
 
 		System.out.println("Total Stock value is " + totalValue);

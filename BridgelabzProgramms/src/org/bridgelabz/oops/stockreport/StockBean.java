@@ -10,6 +10,7 @@ public class StockBean implements Comparable  {
 	private String stocknames;
 	private int numberofshare;
 	private long shareprice;
+	
 	public String getStocknames() {
 		return stocknames;
 	}
@@ -29,10 +30,11 @@ public class StockBean implements Comparable  {
 		this.shareprice = shareprice;
 	}
 	@Override
-	public int compareTo(Object o) {
+	public int compareTo(Object arg0) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
 	
 	
 	
