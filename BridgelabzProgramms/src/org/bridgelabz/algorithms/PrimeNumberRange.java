@@ -1,10 +1,9 @@
 package org.bridgelabz.algorithms;
-import org.Bridgelbz.programms.Utility.algorithms.UtilityAlgorithms;
+import org.bridgelbz.programms.utility.Utility;
+import org.bridgelbz.programms.utility.algorithms.UtilityAlgorithms;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import org.Bridgelbz.programms.Utility.Utility;
 
 public class PrimeNumberRange {
 

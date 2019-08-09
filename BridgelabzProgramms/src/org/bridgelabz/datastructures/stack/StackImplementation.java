@@ -1,6 +1,6 @@
 package org.bridgelabz.datastructures.stack;
 
-import org.Bridgelbz.programms.Utility.dataStructures.Stack;
+import org.bridgelbz.programms.utility.datastructures.Stack;
 
 public class StackImplementation {
 	public static void main(String[] args) {

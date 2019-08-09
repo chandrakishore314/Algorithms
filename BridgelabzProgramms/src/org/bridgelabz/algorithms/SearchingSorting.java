@@ -1,6 +1,7 @@
 package org.bridgelabz.algorithms;
 import java.util.Scanner;
-import org.Bridgelbz.programms.Utility.algorithms.UtilityAlgorithms;
+
+import org.bridgelbz.programms.utility.algorithms.UtilityAlgorithms;
 public class SearchingSorting {
 
 	public static void main(String[] args) {

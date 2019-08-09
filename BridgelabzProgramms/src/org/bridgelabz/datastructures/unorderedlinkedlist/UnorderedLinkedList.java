@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-import org.Bridgelbz.programms.Utility.dataStructures.LinkedList;
+import org.bridgelbz.programms.utility.datastructures.LinkedList;
 
 public class UnorderedLinkedList {
 	

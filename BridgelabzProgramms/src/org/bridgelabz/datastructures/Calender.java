@@ -1,7 +1,7 @@
 package org.bridgelabz.datastructures;
 
 import org.bridgelabz.algorithms.DayOfWeek;
-import org.Bridgelbz.programms.functions.LeapYear;
+import org.bridgelbz.programms.functions.LeapYear;
 
 public class Calender {
 	public static void main(String[] args) {

@@ -1,9 +1,9 @@
 package org.bridgelabz.datastructures;
 
-import org.Bridgelbz.programms.Utility.dataStructures.QueueLinkedList;
-import org.Bridgelbz.programms.Utility.dataStructures.StackLinkedList;
 import org.bridgelabz.algorithms.DayOfWeek;
-import org.Bridgelbz.programms.functions.LeapYear;
+import org.bridgelbz.programms.functions.LeapYear;
+import org.bridgelbz.programms.utility.datastructures.QueueLinkedList;
+import org.bridgelbz.programms.utility.datastructures.StackLinkedList;
 public class CalenderUsingStack {
 	public static void main(String[] args) {
 		int month = Integer.parseInt(args[0]);

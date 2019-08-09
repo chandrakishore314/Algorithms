@@ -1,8 +1,8 @@
 package org.bridgelabz.datastructures;
 
-import org.Bridgelbz.programms.Utility.dataStructures.QueueLinkedList;
 import org.bridgelabz.algorithms.DayOfWeek;
-import org.Bridgelbz.programms.functions.LeapYear;
+import org.bridgelbz.programms.functions.LeapYear;
+import org.bridgelbz.programms.utility.datastructures.QueueLinkedList;
 public class CalenderUsingWeekObject {
 	public static void main(String[] args) {
 		int month = Integer.parseInt(args[0]);

@@ -1,6 +1,7 @@
 package org.bridgelabz.datastructures.dequeue;
-import org.Bridgelbz.programms.Utility.dataStructures.DoubleLinkedList;
 import java.util.Scanner;
+
+import org.bridgelbz.programms.utility.datastructures.DoubleLinkedList;
 public class PalindromeChecker {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

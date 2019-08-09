@@ -6,13 +6,23 @@
  * */
 package org.bridgelabz.oops.deckofcards;
 
-import org.Bridgelbz.programms.Utility.dataStructures.QueueLinkedList;
+import org.bridgelbz.programms.utility.datastructures.QueueLinkedList;
 
 public class QueueOfDeckOfCards {
 	public static void main(String[] args) {
 		String[] suits = { "Clubs", "Diamonds", "Hearts", "Spades" };
-		String[] ranks = { "1 Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11 Jack", "12 Queen",
+		String[] ranks = { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11 Jack", "12 Queen",
 				"13 King" };
+		
+		int Ace=1;
+		int Jack=11;
+		int Queen=12;
+		int King=13;
+		int num=Integer.parseInt(ranks[0]);
+		System.out.println(num);
+		
+		
+		
 		String[][] cards = new String[suits.length][ranks.length];
 		for (int i = 0; i < suits.length; i++) {
 			for (int j = 0; j < ranks.length; j++) {

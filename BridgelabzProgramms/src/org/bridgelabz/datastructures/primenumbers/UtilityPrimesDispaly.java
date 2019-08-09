@@ -2,7 +2,7 @@ package org.bridgelabz.datastructures.primenumbers;
 
 import java.util.ArrayList;
 
-import org.Bridgelbz.programms.Utility.dataStructures.StackLinkedList;
+import org.bridgelbz.programms.utility.datastructures.StackLinkedList;
 
 public class UtilityPrimesDispaly {
 	void display(ArrayList<Integer> primes) {
