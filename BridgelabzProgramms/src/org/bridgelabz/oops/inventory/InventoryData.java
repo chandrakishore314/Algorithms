@@ -1,10 +1,10 @@
 /**
  * Date :06/08/2019
- * created: Chandra Kishore
+ * @author  Chandra Kishore
  * version :
  * modified
  * */
-package org.bridgelabz.Oops;
+package org.bridgelabz.oops.inventory;
 
 import java.io.IOException;
 import java.util.ArrayList;

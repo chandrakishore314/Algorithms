@@ -62,12 +62,40 @@ public class AddresssImplentation {
 	public void sortBYPincode(List<Person> jsondata) {
 		 Collections.sort(jsondata,Person.pincodeCompartaor);
 	}
-
+int number;
 	public void editByFirstName(List<Person> person2) {
 		System.out.println("enter thye first name u want to edit");
 		String search=scanner.next();
 		for(Person p:person2) {
 			if(p.getFirstname().equals(search)) {
+				System.out.println("1.To edit last name  2.To edit phone number \n+"
+						+ "3. To edit  city 4. To edit  state  5.To edit  pincode");
+				number=scanner.nextInt();
+				switch(number) {
+				case 1: System.out.println(" enter lastname to edit ");
+					String lastname=scanner.next();
+				       p.getAddress().setCity(lastname);
+			            break;
+				case 2: System.out.println(" enter phonenumber to edit ");
+				String phonenumber=scanner.next();
+			       p.getAddress().setCity(phonenumber);
+		            break;
+		            
+				case 3: System.out.println(" enter city name to edit ");
+					String city=scanner.next();
+				       p.getAddress().setCity(city);
+			            break;
+			            
+				case 4: System.out.println(" enter state name to edit ");
+						String state=scanner.next();
+					       p.getAddress().setCity(state);
+				            break;
+				            
+				case 5: System.out.println(" enter pincode  to edit ");
+							long pincode=scanner.nextLong();
+						       p.getAddress().setPincode(pincode);
+					            break;
+				}
 			}
 		}
 	}

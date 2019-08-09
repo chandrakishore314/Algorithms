@@ -4,7 +4,7 @@
  * version :
  * modified
  * */
-package org.bridgelabz.Oops;
+package org.bridgelabz.oops.inventory;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;

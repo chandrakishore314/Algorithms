@@ -37,10 +37,11 @@ public class QueueLinkedList<T> {
 			System.out.println("Underflow");
 		}
 		Node<T> temp = head;
-		head = temp.next;
-		if (head == null) {
-			current--;
+		
+		if (head.next != null) {
+			head = temp.next;
 		}
+		
 		return temp.data;
 	}
 }
