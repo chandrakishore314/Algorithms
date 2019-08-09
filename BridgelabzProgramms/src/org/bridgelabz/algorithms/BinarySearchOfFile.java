@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import org.bridgelbz.programms.utility.algorithms.UtilityAlgorithms;
+import org.bridgelabz.programms.utility.algorithms.UtilityAlgorithms;
 
 public class BinarySearchOfFile {
 	

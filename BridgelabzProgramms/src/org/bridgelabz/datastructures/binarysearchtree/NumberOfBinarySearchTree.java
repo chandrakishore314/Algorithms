@@ -1,7 +1,7 @@
 package org.bridgelabz.datastructures.binarysearchtree;
 import java.util.Scanner;
 
-import org.bridgelbz.programms.utility.datastructures.BinarysearchTree;
+import org.bridgelabz.programms.utility.datastructures.BinarysearchTree;
 public class NumberOfBinarySearchTree {
 public static void main(String[] args) {
 Scanner scanner=new Scanner(System.in);

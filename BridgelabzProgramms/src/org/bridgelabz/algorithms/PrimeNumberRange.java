@@ -1,6 +1,6 @@
 package org.bridgelabz.algorithms;
-import org.bridgelbz.programms.utility.Utility;
-import org.bridgelbz.programms.utility.algorithms.UtilityAlgorithms;
+import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.programms.utility.algorithms.UtilityAlgorithms;
 
 import java.util.ArrayList;
 import java.util.Scanner;

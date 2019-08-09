@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelbz.programms.utility.Utility;
+import org.bridgelabz.programms.utility.Utility;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 

@@ -10,7 +10,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.bridgelbz.programms.utility.Utility;
+import org.bridgelabz.programms.utility.Utility;
 
 public class RegularExpressions {
 	static String str = "Hello <<name>>, We have your full name as <<full name>> in our system.\n"

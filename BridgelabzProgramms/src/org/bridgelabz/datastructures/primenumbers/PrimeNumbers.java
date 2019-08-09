@@ -3,8 +3,8 @@ package org.bridgelabz.datastructures.primenumbers;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.bridgelbz.programms.utility.algorithms.UtilityAlgorithms;
-import org.bridgelbz.programms.utility.datastructures.StackLinkedList;
+import org.bridgelabz.programms.utility.algorithms.UtilityAlgorithms;
+import org.bridgelabz.programms.utility.datastructures.StackLinkedList;
 
 public class PrimeNumbers {
 

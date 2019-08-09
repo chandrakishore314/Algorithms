@@ -6,7 +6,7 @@
  * */
 package org.bridgelabz.oops.deckofcards;
 
-import org.bridgelbz.programms.utility.datastructures.QueueLinkedList;
+import org.bridgelabz.programms.utility.datastructures.QueueLinkedList;
 
 public class QueueOfDeckOfCards {
 	public static void main(String[] args) {
