@@ -10,16 +10,11 @@ public class Inventorry {
 	private String Name;
 	private double Price;
 	private long Weight;
-	private Inventorry inventorry;
+	
 	public String getName() {
 		return Name;
 	}
-	public Inventorry getInventorry() {
-		return inventorry;
-	}
-	public void setInventorry(Inventorry inventorry) {
-		this.inventorry = inventorry;
-	}
+	
 	public void setName(String name) {
 		Name = name;
 	}
@@ -34,5 +29,5 @@ public class Inventorry {
 	}
 	public void setWeight(long weight2) {
 		Weight = weight2;
-	}
+	}                                                                                     
 }

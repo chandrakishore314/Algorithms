@@ -1,7 +1,7 @@
 package org.bridgelabz.algorithms;
 import java.util.Scanner;
 /**
- * @author
+ * @author Chandra Kishore
  * **/
 public class BinaryConversion {
 

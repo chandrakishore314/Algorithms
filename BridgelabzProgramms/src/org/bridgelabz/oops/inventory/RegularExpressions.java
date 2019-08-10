@@ -6,11 +6,12 @@
  * */
 package org.bridgelabz.oops.inventory;
 
+import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 
 public class RegularExpressions {
 	static String str = "Hello <<name>>, We have your full name as <<full name>> in our system.\n"
@@ -22,15 +23,18 @@ public class RegularExpressions {
 		String name = scanner.nextLine();
 		System.out.println("enter full name");
 		String fullname = scanner.nextLine();
-		System.out.println("enter mobile number");
-		String phnum = scanner.nextLine();
-		System.out.println("enter date");
-		String date = scanner.nextLine();
+		int length;
+		String phnum;
+		do {
+			System.out.println("enter 10 digit mobile number");
+		 phnum = scanner.nextLine();
+		length=phnum.length();
+		}while(length!=10);
 
 	changeName("name",name);
 	changeName("<<full name>>",fullname);
 	changeName("xxxxxxxxxx",phnum);
-	String changed=changeName("01/01/2016",date);
+	String changed=changeName("01/01/2016",new Date().toString());
 	System.out.println(changed);
 	}
 	private static String changeName(String name, String name2) {

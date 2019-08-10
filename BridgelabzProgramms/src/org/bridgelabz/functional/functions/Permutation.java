@@ -1,4 +1,4 @@
-package org.bridgelabz.programms.functions;
+package org.bridgelabz.functional.functions;
 
 public class Permutation {
 	public static String swapString(String a, int i, int j) {

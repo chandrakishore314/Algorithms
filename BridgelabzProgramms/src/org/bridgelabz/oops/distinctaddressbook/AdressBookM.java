@@ -1,4 +1,4 @@
-package org.bridgelabz.oops.distinctaddressbook;
+       package org.bridgelabz.oops.distinctaddressbook;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 import org.codehaus.jackson.map.ObjectMapper;
 
 public class AdressBookM {
@@ -30,6 +30,9 @@ public class AdressBookM {
 			Business business=new Business();
 			Friends friends=new Friends();
 			Office office=new Office();
+			System.out.println("1.To enter family contacts 2.To enter Business contacts\n"
+					+ "3. To enter friends contacts 4. To enter Office contacts");
+			
 			
 			System.out.println(" enter first name");
 			firstname=scanner.next();
@@ -48,18 +51,21 @@ public class AdressBookM {
 			 family.setPhonenumber(phonenumber);
 			 family.setCity(city);
 			 family.setState(state);
+			 family.setPincode(pincode);
 			 
 			 friends.setFirstname(firstname);
 			 friends.setLastname(lastname);
 			 friends.setPhonenumber(phonenumber);
 			 friends.setCity(city);
 			 friends.setState(state);
+			 friends.setPincode(pincode);
 			 
 			 business.setFirstname(firstname);
 			 business.setLastname(lastname);
 			 business.setPhonenumber(phonenumber);
 			 business.setCity(city);
 			 business.setState(state);
+			 
 			 
 			 office.setFirstname(firstname);
 			 office.setLastname(lastname);

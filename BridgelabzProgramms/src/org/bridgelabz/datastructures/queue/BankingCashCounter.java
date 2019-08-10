@@ -2,7 +2,7 @@ package org.bridgelabz.datastructures.queue;
 
 import java.util.Scanner;
 
-import org.bridgelabz.programms.utility.datastructures.Queue;
+import org.bridgelabz.functional.utility.datastructures.Queue;
 
 public class BankingCashCounter {
 

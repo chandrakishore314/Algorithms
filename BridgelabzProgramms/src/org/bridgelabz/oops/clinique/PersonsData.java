@@ -8,13 +8,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 
 public class PersonsData {
-
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
 
 		DataImplementation dataImplementation = new DataImplementation();
@@ -28,6 +26,7 @@ public class PersonsData {
 		// working with json Data
 		WorkingCliniqueJson workingCliniqueJson = new WorkingCliniqueJson();
 		List<Doctor> doctor = workingCliniqueJson.readDoctorsData();
+		
 		List<Patient> patient = workingCliniqueJson.readPatientsData();
 		// Assigning Doctor patient & with Time
 
@@ -70,7 +69,7 @@ public class PersonsData {
 			System.out.println(doctor.get(0).getDname()+" "+Collections.frequency(availability, doctor.get(0).getDname()));
 		
 		}
-		
+	//	doctor.stream().filter(name->doctor.getClass().getName().equals(doctor));
 		
 		
 		

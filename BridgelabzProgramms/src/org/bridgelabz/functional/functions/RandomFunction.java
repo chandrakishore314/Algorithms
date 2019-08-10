@@ -1,6 +1,6 @@
-package org.bridgelabz.programms.functions;
+package org.bridgelabz.functional.functions;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 
 public class RandomFunction {
 

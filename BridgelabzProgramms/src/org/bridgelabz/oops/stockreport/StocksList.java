@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 

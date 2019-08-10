@@ -1,6 +1,6 @@
-package org.bridgelabz.programms.utility.datastructures;
+package org.bridgelabz.functional.utility.datastructures;
 
-import org.bridgelabz.programms.utility.datastructures.BSTNode;;
+import org.bridgelabz.functional.utility.datastructures.BSTNode;;
 
 public class BinarysearchTree<T extends Comparable<T>>{
 

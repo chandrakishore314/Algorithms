@@ -1,5 +1,5 @@
-package org.bridgelabz.programms.utility.datastructures;
-import org.bridgelabz.programms.utility.datastructures.Node;;
+package org.bridgelabz.functional.utility.datastructures;
+import org.bridgelabz.functional.utility.datastructures.Node;;
 
 
 public class StackLinkedList<T> {

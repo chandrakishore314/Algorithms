@@ -1,7 +1,6 @@
-package org.bridgelabz.programms.utility.algorithms;
+package org.bridgelabz.functional.utility.algorithms;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class UtilityAlgorithms {
 // binary search of Integers
@@ -57,7 +56,7 @@ public class UtilityAlgorithms {
 
 	public static ArrayList<Integer> PrimeNumbers(int range) {
 		ArrayList<Integer> al = new <Integer>ArrayList();
-		int k = 0;
+		
 		for (int i = 2; i < range; i++) {
 			int num = 0;
 			for (int j = i; j >= 1; j--) {

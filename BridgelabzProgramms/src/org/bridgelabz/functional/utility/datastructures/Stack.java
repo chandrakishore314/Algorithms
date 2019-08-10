@@ -1,4 +1,4 @@
-package org.bridgelabz.programms.utility.datastructures;
+package org.bridgelabz.functional.utility.datastructures;
 
 public class Stack <T>{
 

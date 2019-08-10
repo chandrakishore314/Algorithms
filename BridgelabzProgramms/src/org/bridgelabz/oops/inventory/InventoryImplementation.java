@@ -11,7 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
@@ -24,10 +24,11 @@ public class InventoryImplementation {
 	
 	public void writeToJson(List<Inventorry> inventories) throws JsonGenerationException, JsonMappingException, IOException {
 		File file=	new File("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/inventory/Inventory.json");
-		 FileWriter fw = new FileWriter(file,true);
+		 FileWriter fw = new FileWriter(file);
 		objectMapper.writeValue(fw, inventories);
 	}
 
+	
 	public List<Inventorry> readInventoryData() throws JsonParseException, JsonMappingException, IOException {
 		List<Inventorry> inventorry= 
 				objectMapper.readValue(new File("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/inventory/Inventory.json"),new TypeReference<List<Inventorry>>() {});

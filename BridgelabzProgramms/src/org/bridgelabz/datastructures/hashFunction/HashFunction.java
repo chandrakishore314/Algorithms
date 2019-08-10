@@ -3,7 +3,7 @@ import java.io.IOException;
 
 import org.bridgelabz.algorithms.Bubblesort;
 import org.bridgelabz.datastructures.ordereslinkedlist.OrderedLikedList;
-import org.bridgelabz.programms.utility.datastructures.LinkedList;
+import org.bridgelabz.functional.utility.datastructures.LinkedList;
 
 public class HashFunction {
 	public static void main(String[] args) throws IOException {

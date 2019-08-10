@@ -1,7 +1,5 @@
 package org.bridgelabz.oops.clinique;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+
 public class Availability {
 	private Patient patient;
 	private String date;

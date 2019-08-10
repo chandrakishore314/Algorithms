@@ -6,23 +6,23 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 
-public class AddresssImplentation {
+public class AddresssImplentation implements AdressFunctions {
 	String firstname;
 	String lastname;
 	String phonenumber;
 	String city;
 	String state;
 	long pincode;
-	List<Person> person = new ArrayList<Person>();
+
 	Scanner scanner = Utility.getScanner();
 	Person man;
 	Address adress;
 	WorkingWithJSon WorkingWithJSon=new WorkingWithJSon();
-	public void addPerson(int num) throws JsonGenerationException, JsonMappingException, IOException {
+	public void addPerson(List<Person> jsondata, int num) throws JsonGenerationException, JsonMappingException, IOException {
 		for (int i = 0; i < num; i++) {
 			adress = new Address();
 			man = new Person();
@@ -45,14 +45,14 @@ public class AddresssImplentation {
 			adress.setState(state);
 			adress.setPincode(pincode);
 			man.setAddress(adress);
-			person.add(man);
+			jsondata.add(man);
 
 		}
-		WorkingWithJSon.writeToJson(person);
+		WorkingWithJSon.writeToJson(jsondata);
 	}
 
-	public void display() {
-		System.out.println(person);
+	public void display(List<Person> jsondata) {
+		System.out.println(jsondata);
 	}
 
 	public void sortBYLastName(List<Person> jsondata) {
@@ -64,7 +64,7 @@ public class AddresssImplentation {
 	}
 int number;
 	public void editByFirstName(List<Person> person2) {
-		System.out.println("enter thye first name u want to edit");
+		System.out.println("enter the first name u want to edit");
 		String search=scanner.next();
 		for(Person p:person2) {
 			if(p.getFirstname().equals(search)) {
@@ -112,4 +112,6 @@ int number;
 		}
 		return person2;
 	}
+
+	
 }

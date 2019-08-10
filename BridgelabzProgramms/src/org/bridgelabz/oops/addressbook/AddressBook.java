@@ -1,12 +1,11 @@
 package org.bridgelabz.oops.addressbook;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelabz.programms.utility.Utility;
+import org.bridgelabz.functional.utility.Utility;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 
@@ -16,38 +15,37 @@ public class AddressBook  {
 		
 		
 		 Scanner scanner=Utility.getScanner();
-		 AddresssImplentation addresssImplentation=new AddresssImplentation();
-		 System.out.println("enter number of persons data  to enter");
-		 int number=scanner.nextInt();
-		 WorkingWithJSon WorkingWithJSon=new WorkingWithJSon();
-		addresssImplentation.addPerson(number);
+		 AdressFunctions adressFunctions=new AddresssImplentation();
 		 
-		int choice = 0;
+		 WorkingWithJSon WorkingWithJSon=new WorkingWithJSon();
 		
-		List<Person> jsondata= WorkingWithJSon.readInventoryData();
-		while(true) {
+		 List<Person> jsondata=new  ArrayList<Person>();
+		 int choice = 0;
+		int number = 8;
+		 jsondata= WorkingWithJSon.readInventoryData();
+		do {
 			 System.out.println("enter ur choice : 1. To sort By Last Name  1. To sort By pincode  3 . To  Dispalay Data\n"
 				 		+ "4.To add the person  5.To edit data by First Name 6.To removeByFirstName\n"
 						 +"7. Write persons data to json");
 			choice=scanner.nextInt();
 		switch(choice) {
 		
-		case 1: addresssImplentation.sortBYLastName(jsondata);
+		case 1: adressFunctions.sortBYLastName(jsondata);
 		        break;
-		case 2: addresssImplentation.sortBYPincode(jsondata);
+		case 2: adressFunctions.sortBYPincode(jsondata);
 		         break;
-		case 3: addresssImplentation.display();
+		case 3: adressFunctions.display(jsondata);
 		         break;
-		case 4:	addresssImplentation.addPerson(1);
+		case 4:	adressFunctions.addPerson(jsondata,1);
 		        break;
-		case 5:addresssImplentation.editByFirstName(jsondata);
+		case 5:adressFunctions.editByFirstName(jsondata);
 		        break;
-		case 6:jsondata=addresssImplentation.removeByFirstName(jsondata);
+		case 6:jsondata=adressFunctions.removeByFirstName(jsondata);
 		        break;
 		case 7:  WorkingWithJSon.writeToJson(jsondata);
 		         break;
-		 default:System.exit(0); 
-		
-		
-		}}
+		case 8:  number=0;
+		      break;
+		}
+		}while(number==8);
 }}

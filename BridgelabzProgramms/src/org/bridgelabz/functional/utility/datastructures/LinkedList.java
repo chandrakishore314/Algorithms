@@ -1,4 +1,4 @@
-package org.bridgelabz.programms.utility.datastructures;
+package org.bridgelabz.functional.utility.datastructures;
 
 import java.io.FileWriter;
 import java.io.IOException;
