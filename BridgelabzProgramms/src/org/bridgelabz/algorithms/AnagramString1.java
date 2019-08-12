@@ -15,11 +15,11 @@ public class AnagramString1 {
 		char[] s2 = str2. toCharArray();
 		Arrays.sort(s1);
 		Arrays.sort(s2);
-		
+		sc.close();
 		int l1=str1.length();
 		int l2=str2.length();
 		int num=0;
-		/*
+		
 		if(l1==l2) {
 			for(int i=0;i<l1;i++) {
 				for(int j=0;j<l2;j++)
@@ -40,7 +40,7 @@ public class AnagramString1 {
        if(num==l1)
     	   System.out.println("Anagram strings");
        else System.out.println("Not Anagram strings");
-		*/ 
+	
 		boolean status = Arrays.equals(s2, s1);
 		System.out.println("status is "+status);
 		

@@ -33,12 +33,7 @@ case 3:System.out.println(money);
          
 case 4:queue.pop();
 }}
-
-
-
-
-
-
+scanner.close();
 	}
 
 }

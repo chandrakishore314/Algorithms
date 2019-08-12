@@ -3,7 +3,7 @@ package org.bridgelabz.functional.utility.datastructures;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class LinkedList<T extends  Comparable>  {
+public class LinkedList<T extends Comparable<? super T>>  {
 	Node<T> head;
 	 int length=0;
 

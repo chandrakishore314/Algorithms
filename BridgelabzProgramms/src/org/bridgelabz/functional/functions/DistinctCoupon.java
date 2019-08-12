@@ -20,7 +20,7 @@ public class DistinctCoupon {
 			}
 		}
 		System.out.println("distinct numbers are"+count);
-		
+		scanner.close();
 	}
 
 }

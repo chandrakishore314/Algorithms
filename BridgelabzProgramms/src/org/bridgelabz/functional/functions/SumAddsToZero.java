@@ -30,5 +30,6 @@ public class SumAddsToZero {
 			
 			}
 			System.out.println( "distinct numbers "+distNumber);
+			sc.close();
 	}
 }

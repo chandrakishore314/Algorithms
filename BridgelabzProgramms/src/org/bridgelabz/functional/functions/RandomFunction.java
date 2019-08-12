@@ -5,7 +5,7 @@ import org.bridgelabz.functional.utility.Utility;
 public class RandomFunction {
 
 	public static void main(String[] args) {
-		int head=0,tail=0,trials,win=0,loss=0;
+		int trials,win=0,loss=0;
 		System.out.println("enter number of trials u want");
 trials=Utility.getScanner().nextInt();
 for(int i=0;i<trials;i++) {

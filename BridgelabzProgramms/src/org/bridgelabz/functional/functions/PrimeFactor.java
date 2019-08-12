@@ -11,9 +11,11 @@ public class PrimeFactor {
 		System.out.println("enter Number ");
 		int n = scanner.nextInt();
 		primeFactors(n);
+		scanner.close();
 
 	}
 
+	// To print the prime factors of value n
 	public static void primeFactors(int n) {
 		while (n % 2 == 0) {
 			System.out.print(2 + " ");
@@ -30,6 +32,7 @@ public class PrimeFactor {
 
 		if (n > 2)
 			System.out.print(n);
+		
 	}
 
 }

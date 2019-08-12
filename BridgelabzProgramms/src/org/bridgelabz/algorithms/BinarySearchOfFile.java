@@ -6,7 +6,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 import org.bridgelabz.functional.utility.algorithms.UtilityAlgorithms;
 
@@ -26,6 +25,7 @@ static String str2="Vennapus2";
 		  while ((st = br.readLine()) != null) {
 			  str.append(st);
 		  }
+		  br.close();
 		  String str1=str.toString();
 		  String[] arrSplit = str1.split(" ");
 		  UtilityAlgorithms ob = new UtilityAlgorithms(); 

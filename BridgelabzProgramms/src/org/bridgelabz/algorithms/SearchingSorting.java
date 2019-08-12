@@ -48,7 +48,7 @@ public class SearchingSorting {
            }else {
         	   System.out.println("element found at"+(index+1)+"position");
            }
-           
+           scanner.close();
 	}
 
 

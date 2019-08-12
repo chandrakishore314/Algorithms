@@ -8,7 +8,7 @@ public class StackImplementation {
 		String str="(5+6)*(7+8)/(4+3)(5+6)*(7+8)/(4+3)";
 		char ch[]=str.toCharArray();
 		int length=ch.length;
-		Stack stack=new Stack(length);
+		Stack<Character> stack=new Stack<Character>(length);
 		for(int start=0;start<length;start++) {
 			if(ch[start]=='(') {
 				stack.push(ch[start]);}

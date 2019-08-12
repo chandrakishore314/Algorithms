@@ -38,7 +38,7 @@ public class StackLinkedList<T> {
 	            
 	        } 
 	        else { 
-	            Node temp = top; 
+	        	Node<T> temp = top; 
 	            while (temp != null) { 
 	  
 	                System.out.println( temp.data); 

@@ -19,7 +19,7 @@ int array[][]=new int[row][column];
 array[i][j]=sc.nextInt();
 	   }		
 	}
-	
+	sc.close();
 	try {
         
         PrintWriter pw = new PrintWriter(System.out);

@@ -58,9 +58,12 @@ public class TicTacToePrgramm {
 			}
 				count++;
 				}
+				sc.close();
 		}
 
 	}
+	
+	// To display the  Tic-Tac-Toe Board 
 	static void dispBoard(int arr[][]) {
 
 		for (int i = 0; i < arr.length; i++) {
@@ -83,7 +86,7 @@ public class TicTacToePrgramm {
 		
 		
 	
-
+// To check the win according the condition of rows and columns
 	private static boolean win(int[][] a) {
 		for (int i = 0; i < 3; i++) {
 			if (a[i][0] == a[i][1] && a[i][0] == a[i][2]) {

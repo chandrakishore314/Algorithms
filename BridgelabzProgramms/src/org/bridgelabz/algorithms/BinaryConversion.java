@@ -14,11 +14,13 @@ public class BinaryConversion {
 		for (int j = 7; j >= 0; j--) {
 			System.out.print(ar[j]);
 		}
+		sc.close();
 		int numSwap = swap(ar);
 		System.out.println();
 		System.out.println("number after swap" + numSwap);
 	}
 
+	// To swap the Binary Number from 0-3 to 4-7
 	private static int swap(int[] br) {
 		int num = 0;
 
@@ -40,11 +42,11 @@ public class BinaryConversion {
 				num += Math.pow(2, j);
 
 		}
+		
 		return num;
 	}
-/**
- * @
- * **/
+
+	// To convert into Binary Digits
 	private static int[] toBinary(int n) {
 		int bin[] = new int[100];
 		int i = 0;

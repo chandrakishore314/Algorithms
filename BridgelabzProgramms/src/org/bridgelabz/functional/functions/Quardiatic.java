@@ -27,7 +27,7 @@ public class Quardiatic {
     	
     }
     
-  
+    sc.close();
 	}
 
 }

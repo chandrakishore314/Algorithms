@@ -12,6 +12,7 @@ public class MergeSort {
 		for(int i=0;i<length;i++) {
 			array[i]=sc.nextInt();
 		}
+		sc.close();
 		MergeSort mergeSort=new MergeSort();
 		mergeSort.mergeSort(array,0,length-1);
 		System.out.println("after merge sorting");
@@ -21,7 +22,7 @@ public class MergeSort {
 		
 
 	}
-
+// To sort the array using mergesort
 	private  void mergeSort(int[] array, int beg, int end) {
 		if(beg<end) {
 			int mid =(beg+end)/2;
@@ -31,7 +32,7 @@ public class MergeSort {
 		}
 		
 	}
-
+	// To sort the array 
 	private  void merge(int[] array, int beg, int mid, int end) {
 		int l,r;
 		l=mid-beg+1;

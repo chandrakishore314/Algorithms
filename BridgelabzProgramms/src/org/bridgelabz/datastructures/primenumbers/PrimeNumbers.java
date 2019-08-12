@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import org.bridgelabz.functional.utility.algorithms.UtilityAlgorithms;
-import org.bridgelabz.functional.utility.datastructures.StackLinkedList;
 
 public class PrimeNumbers {
 
@@ -15,7 +14,7 @@ public class PrimeNumbers {
 		ArrayList<Integer> anagrams=u.anagrams(primes);
 		
 		
-		StackLinkedList s=new StackLinkedList();
+		
 		System.out.println("enter your choice:(1)primes upto 1000 \n"
 				+ "(2)Anagrams upto 1000\n"+
 				"(3)Using Stack Anagrams in reverse order\n"
@@ -30,6 +29,6 @@ public class PrimeNumbers {
 		case 4:u.pushToQueue(anagrams);
 		}
 		
-		
+		scanner.close();
 	}
 }

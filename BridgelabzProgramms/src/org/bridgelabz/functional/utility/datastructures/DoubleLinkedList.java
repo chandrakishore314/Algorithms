@@ -12,7 +12,7 @@ public class DoubleLinkedList<T> {
 				front.value = data;
 				end = front;
 			} else {
-				NodeD<T> temp = null;
+				NodeD<T> temp = null ;
 				temp.value = data;
 				temp.next = front;
 				front.prev = temp;

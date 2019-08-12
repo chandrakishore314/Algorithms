@@ -26,5 +26,7 @@ while(low<=high)	{
 	}
 	
 	
-}}
+}
+sc.close();
+}
 }

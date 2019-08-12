@@ -23,7 +23,7 @@ public class temparatureConversion {
 		    System.out.println("pls enter c or f conversions"); 
 		}
 				
-				
+		sc.close();	
 
 			}
 

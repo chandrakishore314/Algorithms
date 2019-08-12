@@ -1,7 +1,5 @@
 package org.bridgelabz.algorithms;
 
-
-
 import java.util.Scanner;
 
 public class Bubblesort {
@@ -14,6 +12,7 @@ public class Bubblesort {
 		for(int i=0; i<length;i++) {
 			ar[i]=sc.nextInt();
 			}
+		sc.close();
 		int arr[]=sort(ar);
 		
 
@@ -22,7 +21,7 @@ public class Bubblesort {
 	}
 	
 	}
-
+// Bubble sort of Numbers
 	public static int[] sort(int[] ar) {
 		int n=ar.length,temp;                                             
 		for(int i=0;i<n-1;i++)	{

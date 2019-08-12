@@ -87,6 +87,7 @@ public class AdressBookM {
 		File file=	new File("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/distinctaddressbook/address.json");
 		 FileWriter fw = new FileWriter(file);
 		objectMapper.writeValue(fw, addresslist);
+		scanner.close();
 	}
 
 }

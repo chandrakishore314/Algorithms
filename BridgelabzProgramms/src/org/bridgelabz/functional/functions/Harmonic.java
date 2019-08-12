@@ -2,6 +2,7 @@ package org.bridgelabz.functional.functions;
 
 import java.util.Scanner;
 
+// To calculate harmonic Value
 public class Harmonic {
 
 	static double nthHarmonic(int Number) 
@@ -25,7 +26,7 @@ public class Harmonic {
 	            int Number ; 
 	            Number=sc.nextInt();  
 	    System.out.print(nthHarmonic(Number)); 
-	      
+	    sc.close();
 	    } 
-
+	   
 }

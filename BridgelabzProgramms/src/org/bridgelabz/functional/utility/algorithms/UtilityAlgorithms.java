@@ -55,7 +55,7 @@ public class UtilityAlgorithms {
 	}
 
 	public static ArrayList<Integer> PrimeNumbers(int range) {
-		ArrayList<Integer> al = new <Integer>ArrayList();
+		ArrayList<Integer> al = new ArrayList<Integer>();
 		
 		for (int i = 2; i < range; i++) {
 			int num = 0;
@@ -86,6 +86,7 @@ public class UtilityAlgorithms {
 		return reversed;
 	}
 
+	// To check the number is polindrome or Not
 	public static boolean Polindrome(int num, ArrayList<Integer> al) {
 		int reversed = 0;
 		boolean reve = false;

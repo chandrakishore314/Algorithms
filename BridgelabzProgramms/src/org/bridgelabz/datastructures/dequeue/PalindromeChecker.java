@@ -26,5 +26,6 @@ public class PalindromeChecker {
 		} else {
 			System.out.println(" it is not a polindrome");
 		}
+		sc.close();
 	}
 }

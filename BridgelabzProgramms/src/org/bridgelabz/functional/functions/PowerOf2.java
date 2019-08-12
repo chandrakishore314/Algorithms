@@ -1,6 +1,6 @@
 package org.bridgelabz.functional.functions;
 
-
+// To print the power of 2
 public class PowerOf2 {
 
 	public static void main(String[] args) {

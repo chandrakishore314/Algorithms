@@ -8,7 +8,7 @@ public class QueueLinkedList<T> {
 	int current = 0;
 	public void push(T data) {
 		Node<T> temp;
-		Node<T> node = new Node(data);
+		Node<T> node = new Node<T>(data);
 		if (head == null) {
 			head = node;
 		} else {
@@ -25,7 +25,7 @@ public class QueueLinkedList<T> {
 		return current;
 	}
 	public boolean isEmpty() {
-		boolean flag;
+		
 		if (current == 0) {
 			return true;
 		} else {

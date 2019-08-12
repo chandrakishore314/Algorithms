@@ -12,6 +12,7 @@ int array[]=new int[num];
 for(int i=0;i<num;i++) {
 	array[i]=scanner.nextInt();
 }
+scanner.close();
 BinarysearchTree<Integer> bst=new BinarysearchTree<Integer>();
 for(int j=0;j<num;j++) {
 	bst.insert(array[j]);

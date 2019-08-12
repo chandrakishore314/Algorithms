@@ -1,6 +1,7 @@
 package org.bridgelabz.functional.functions;
 
 public class Permutation {
+	// To swap the String
 	public static String swapString(String a, int i, int j) {
 		char[] b = a.toCharArray();
 		char ch;
@@ -25,10 +26,10 @@ public class Permutation {
 			System.out.print(striter[i] + " ");
 		}
 	}
-
+// To generate possible Strings in iterative way 
 	private static String[] generaepermutationIterative(String str, int i, int len) {
 		String str1;
-		String strite[] = null;
+		String strite[] = new String[len];
 		int r = 0;
 		System.out.println("using iterarive");
 		for (int k = 0; k < str.length(); k++) {
@@ -42,7 +43,7 @@ public class Permutation {
 		return strite;
 
 	}
-
+	//To generate possible Strings in recursive way
 	public static String[] generatePermutationRecursive(String str, int start, int end) {
 		String array[] = new String[6];
 		int k = 0;

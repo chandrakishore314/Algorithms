@@ -16,9 +16,10 @@ public class Stack <T>{
 		top++;
 		stack[top]=ch;
 	}
-	public  void pop() {
+	public  char pop() {
 		char element = stack[top];
 		top--;
+		return element;
 	}
 	public  boolean isEmpty() {
 		return top==-1?true:false;

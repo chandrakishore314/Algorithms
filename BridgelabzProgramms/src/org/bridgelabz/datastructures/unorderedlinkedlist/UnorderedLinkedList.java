@@ -2,9 +2,7 @@ package org.bridgelabz.datastructures.unorderedlinkedlist;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -41,7 +39,9 @@ public class UnorderedLinkedList {
 			linkedList.append(searchWord);
 		}
 		linkedList.printList("H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\ordereslinkedlist\\Numbers2.txt");
+sc.close();
 
+br.close();
 	}
 
 	

@@ -19,6 +19,7 @@ public class LeapYear {
         {
             System.out.println("Year "+year+" is not a Leap Year");
         }
+                s.close();
 	}
 
 	public static boolean find(int year) {

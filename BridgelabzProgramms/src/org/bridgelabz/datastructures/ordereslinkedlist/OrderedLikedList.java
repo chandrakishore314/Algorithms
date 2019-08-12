@@ -2,7 +2,6 @@ package org.bridgelabz.datastructures.ordereslinkedlist;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -31,6 +30,7 @@ public class OrderedLikedList {
 			
 			linkedList.sort();
 		}
+		scanner.close();
 		linkedList.printList("H:\\Bridgelbz\\BridgelabzProgramms\\src\\org\\bridgelabz\\datastructures\\ordereslinkedlist\\Numbers2.txt");
 	}
 	
@@ -52,6 +52,7 @@ public class OrderedLikedList {
 			System.out.println(arrSplit[i]);
 			arr[i] = Integer.parseInt(arrSplit[i]);
 		}
+		br.close();
 		return arr;
 	}	}
 
