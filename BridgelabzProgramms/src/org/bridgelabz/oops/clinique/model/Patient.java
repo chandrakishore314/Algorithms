@@ -1,17 +1,15 @@
 package org.bridgelabz.oops.clinique.model;
 
 
+
+
 public class Patient {
+
+	
 	private String name;
+	
 	private int id;
 	private String mobilenum;
-	private int age;
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
 	public String getName() {
 		return name;
 	}
@@ -29,5 +27,13 @@ public class Patient {
 	}
 	public void setMobilenum(String mobilenum) {
 		this.mobilenum = mobilenum;
-	} 
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	private int age;
+	
 }

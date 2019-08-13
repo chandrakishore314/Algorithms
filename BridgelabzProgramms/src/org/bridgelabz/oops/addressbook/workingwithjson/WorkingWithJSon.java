@@ -19,6 +19,7 @@ public class WorkingWithJSon {
 	
 	 JSONParser parser = new JSONParser();
 	 JSONArray jsonArray=new JSONArray(); 
+	 // To write to the json
 	public void writeToJson(List<Person> persons) throws JsonGenerationException, JsonMappingException, IOException {
 JSONObject json = new JSONObject();
 		for(Person p:persons) {
@@ -31,7 +32,7 @@ JSONObject json = new JSONObject();
         json.put("pincode", p.getAddress().getPincode());
        jsonArray.add(json);
 		}
-try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/addressbook/address.json")) {
+try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/addressbook/workingwithjson/address.json")) {
     file.write(jsonArray.toJSONString());
     file.flush();
 } catch (IOException e) {
@@ -39,12 +40,12 @@ try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramm
 }	
 		
 	}
-
+	 // To read from the json
 	public List<Person> readInventoryData() throws JsonParseException, JsonMappingException, IOException {
 		List<Person> jsondata= new ArrayList<Person>();
 		JSONArray jsonArray = null;
 		try {
-			jsonArray = (JSONArray) parser.parse(new FileReader("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/addressbook/address.json"));
+			jsonArray = (JSONArray) parser.parse(new FileReader("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/addressbook/workingwithjson/address.json"));
 		}  catch (IOException | ParseException e) {
 			e.printStackTrace();
 		}

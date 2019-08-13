@@ -3,9 +3,6 @@ package org.bridgelabz.oops.clinique.model;
 public class Doctor {
 	private String dname;
 	private int did;
-	private String specialisation;
-	
-	
 	public String getDname() {
 		return dname;
 	}
@@ -24,5 +21,8 @@ public class Doctor {
 	public void setSpecialisation(String specialisation) {
 		this.specialisation = specialisation;
 	}
+	private String specialisation;
+	
+	
 	
 }

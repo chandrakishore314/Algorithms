@@ -2,35 +2,15 @@ package org.bridgelabz.oops.addressbook.model;
 
 import java.util.Comparator;
 
+import lombok.Getter;
+import lombok.Setter;
+@Getter@Setter
 public class Person {
 	String firstname;
 	String lastname;
     String phonenumber;
     Address address;
-	public String getFirstname() {
-		return firstname;
-	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-	public String getLastname() {
-		return lastname;
-	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-	public String getPhonenumber() {
-		return phonenumber;
-	}
-	public void setPhonenumber(String phonenumber) {
-		this.phonenumber = phonenumber;
-	}
-	public Address getAddress() {
-		return address;
-	}
-	public void setAddress(Address address) {
-		this.address = address;
-	}
+
 	@Override
 	public String toString() {
 		return "Person [firstname=" + firstname + ", lastname=" + lastname + ", phonenumber=" + phonenumber

@@ -1,1 +1,1 @@
-[{"patient":{"name":"chandra","id":1,"mobilenum":"5565","age":10},"date":null,"doctor":{"dname":"jackson","did":1,"specialisation":"eye"}},{"patient":{"name":"kishore","id":2,"mobilenum":"5555","age":12},"date":"Sat Aug 10 12:37:21 IST 2019","doctor":{"dname":"sam","did":2,"specialisation":"ear"}}]
+[{"doctor":{"specialisation":"ear","dname":"kishore","did":12},"date":null,"patient":{"mobilenum":"5465465","name":"gdfgf","id":122,"age":12}}]

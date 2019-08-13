@@ -28,6 +28,7 @@ public class StockWithJson {
 	 JSONParser parser = new JSONParser();
 	 JSONArray jsonArray=new JSONArray(); 
 	 JSONObject json = new JSONObject();
+	 // To add the stock list to json
 	public void addToJson(List<Stock> stockObject) throws JsonGenerationException, JsonMappingException, IOException {
 		for(Stock s:stockObject) {
 			json = new JSONObject();
@@ -37,7 +38,7 @@ public class StockWithJson {
        jsonArray.add(json);
 
 		}
-		try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/stockreport/stock.json")) {
+		try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/stockreport/json/stock.json")) {
 
 		    file.write(jsonArray.toJSONString());
 		    file.flush();
@@ -47,11 +48,12 @@ public class StockWithJson {
 		}
 	}
 
+	// // To print  the stock list from json
 	public List<Stock> readFromJson(){
 		List<Stock> inventories=new ArrayList<Stock>();
 	JSONArray jsonArray = null;
 		try {
-			jsonArray = (JSONArray) parser.parse(new FileReader("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/stockreport/stock.json"));
+			jsonArray = (JSONArray) parser.parse(new FileReader("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/stockreport/json/stock.json"));
 		}  catch (IOException | ParseException e) {
 			e.printStackTrace();
 			
@@ -62,9 +64,11 @@ public class StockWithJson {
 		JSONObject jobject = (JSONObject) obj;
 		String name = (String) jobject.get("name");
 		stock.setStocknames(name);
-		int numberofshare =(int) jobject.get(" numberofshare");
+		long numberofshares =(long) jobject.get("numberofshare");
+		int numberofshare=(int)numberofshares;
 		 stock.setNumberofshare( numberofshare);
-		 double shareprice=(Double) jobject.get("shareprice");
+		 long shareprices=(long) jobject.get("shareprice");
+		 double shareprice=shareprices;
 		 stock.setShareprice(shareprice);
 		 inventories.add(stock);
 	}}
@@ -74,6 +78,8 @@ return inventories;
 
 
 	}
+	
+	 // To add the Transaction list to json
 	public void addToJsonTransaction(List<Transaction> transactionObject) throws JsonGenerationException, JsonMappingException, IOException {
 JSONObject tjson ;
 JSONArray tjsonArray=new JSONArray(); 
@@ -96,6 +102,8 @@ JSONArray tjsonArray=new JSONArray();
 			
 	}
 
+	
+	 // To read the Transaction list from the json
 	public List<Transaction> readFromJsonTransaction() throws JsonParseException, JsonMappingException, IOException {
 List<Transaction> transactionlist=new ArrayList<Transaction>();
 JSONArray jsonArray = null;
