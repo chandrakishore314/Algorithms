@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bridgelabz.oops.addressbook.model.Person;
 import org.bridgelabz.oops.clinique.model.Availability;
 import org.bridgelabz.oops.clinique.model.Doctor;
 import org.bridgelabz.oops.clinique.model.Patient;
@@ -18,29 +17,21 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.google.gson.Gson;
+
 public class WorkingCliniqueJson {
 	
 	 JSONParser parser = new JSONParser();
-	
+	Gson gson=new Gson();
 	 
 		// To write Patient object to json File
 		public void writeToJson(List<Patient> patients) throws JsonGenerationException, JsonMappingException, IOException {
-			JSONObject pjson = new JSONObject();
-			 JSONArray pjsonArray=new JSONArray(); 
+		String pstring=gson.toJson(patients);
 				
-			for(Patient p:patients) {
-				pjson = new JSONObject();
-	        pjson.put("name",p.getName());
-	        pjson.put("id", p.getId());
-	        pjson.put("mobilenum", p.getMobilenum());
-	        pjson.put("age", p.getAge());
-	       pjsonArray.add(pjson);
-
-			}
 			
 			try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/clinique/workingwithjson/patient.json")) {
 
-			    file.write(pjsonArray.toJSONString());
+			    file.write(pstring);
 			    file.flush();
 
 			} catch (IOException e) {
@@ -82,23 +73,13 @@ public class WorkingCliniqueJson {
 		
 	}
 		// To write  Docotr object to json File
-		public void writeTodJson(List<Doctor> doctor) throws JsonGenerationException, JsonMappingException, IOException {
-			
-			JSONObject djson = new JSONObject();
-			 JSONArray djsonArray=new JSONArray(); 
-				
-			for(Doctor d:doctor) {
-				djson = new JSONObject();
-	        djson.put("dname",d.getDname());
-	        djson.put("did", d.getDid());
-	        djson.put("specialisation", d.getSpecialisation());
-	      djsonArray.add(djson);
-
-			}
+		public void writeTodJson(List<Doctor> doctor) throws IOException {
+			String doctorjson=gson.toJson(doctor);
+		
 			
 			try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/clinique/workingwithjson/doctor.json")) {
 
-			    file.write(djsonArray.toJSONString());
+			    file.write(doctorjson);
 			    file.flush();
 
 			} catch (IOException e) {
@@ -139,38 +120,13 @@ public class WorkingCliniqueJson {
 return doctorslist;
 	}
 		// To write Availability object from json File
-		public void writeToAvailabilityJson(List<Availability> availability) throws JsonGenerationException, JsonMappingException, IOException {
-			JSONObject json = new JSONObject();
-			 JSONArray pjsonArray=new JSONArray(); 
-			 JSONObject pjson = new JSONObject();
-			 JSONObject djson = new JSONObject();
-			for(Availability a:availability) {
-				pjson = new JSONObject();
-				pjson.put("name", a.getPatient().getName());
-				pjson.put("id", a.getPatient().getId());
-				pjson.put("mobilenum", a.getPatient().getMobilenum());
-				pjson.put("age", a.getPatient().getAge());
-				
-				djson = new JSONObject();
-				djson.put("dname",a.getDoctor().getDname());
-				djson.put("did", a.getDoctor().getDid());
-				djson.put("specialisation",a.getDoctor().getSpecialisation());
-				
-				
-				
-				json.put("patient", pjson);
-				
-				
-	       
-	        json.put("doctor", djson);
-	        json.put("date",a.getDate());
-	       pjsonArray.add(json);
-
-			}
+		public void writeToAvailabilityJson(List<Availability> availability) throws  IOException {
+			
+			String availabilitystring=gson.toJson(availability);
 			
 			try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/clinique/workingwithjson/availability.json")) {
 
-			    file.write(pjsonArray.toJSONString());
+			    file.write(availabilitystring);
 			    file.flush();
 
 			} catch (IOException e) {

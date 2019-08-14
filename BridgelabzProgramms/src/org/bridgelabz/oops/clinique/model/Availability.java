@@ -3,9 +3,15 @@ package org.bridgelabz.oops.clinique.model;
 ;
 
 public class Availability {
+	@Override
+	public String toString() {
+		return "Availability [patient=" + patient + ", date=" + date + ", doctor=" + doctor + "]";
+	}
+	
 	private Patient patient;
 	private String date;
 	private Doctor doctor;
+	
 	public Patient getPatient() {
 		return patient;
 	}

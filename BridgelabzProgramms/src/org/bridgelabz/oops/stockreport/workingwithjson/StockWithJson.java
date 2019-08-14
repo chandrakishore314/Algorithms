@@ -24,23 +24,16 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import com.google.gson.Gson;
+
 public class StockWithJson {
 	 JSONParser parser = new JSONParser();
-	 JSONArray jsonArray=new JSONArray(); 
-	 JSONObject json = new JSONObject();
-	 // To add the stock list to json
-	public void addToJson(List<Stock> stockObject) throws JsonGenerationException, JsonMappingException, IOException {
-		for(Stock s:stockObject) {
-			json = new JSONObject();
-        json.put("stocknames",s.getStocknames());
-        json.put("numberofshare", s.getNumberofshare());
-        json.put("shareprice", s.getShareprice());
-       jsonArray.add(json);
-
-		}
+		Gson gson=new Gson();
+	public void addToJson(List<Stock> stockObject) throws  IOException {
+		String jsonString = gson.toJson(stockObject);
 		try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/stockreport/json/stock.json")) {
 
-		    file.write(jsonArray.toJSONString());
+		    file.write(jsonString);
 		    file.flush();
 
 		} catch (IOException e) {
@@ -67,8 +60,7 @@ public class StockWithJson {
 		long numberofshares =(long) jobject.get("numberofshare");
 		int numberofshare=(int)numberofshares;
 		 stock.setNumberofshare( numberofshare);
-		 long shareprices=(long) jobject.get("shareprice");
-		 double shareprice=shareprices;
+		 double shareprice= (double) jobject.get("shareprice");
 		 stock.setShareprice(shareprice);
 		 inventories.add(stock);
 	}}
@@ -81,19 +73,11 @@ return inventories;
 	
 	 // To add the Transaction list to json
 	public void addToJsonTransaction(List<Transaction> transactionObject) throws JsonGenerationException, JsonMappingException, IOException {
-JSONObject tjson ;
-JSONArray tjsonArray=new JSONArray(); 
-		for(Transaction i:transactionObject) {
-			tjson = new JSONObject();
-        tjson.put("transactiontype", i.getTransactiontype());
-        tjson.put("stocknames", i.getStocknames());
-        tjson.put("transactnumberofshare", i.getTransactnumberofshare());
-       tjsonArray.add(tjson);
 
-		}
+String transactionstring=gson.toJson(transactionObject);
 		try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/stockreport/jsontransaction.json")) {
 
-		    file.write(tjsonArray.toJSONString());
+		    file.write(transactionstring);
 		    file.flush();
 
 		} catch (IOException e) {

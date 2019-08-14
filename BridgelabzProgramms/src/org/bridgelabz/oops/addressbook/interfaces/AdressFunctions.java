@@ -10,7 +10,7 @@ package org.bridgelabz.oops.addressbook.interfaces;
 	public interface AdressFunctions {
 		abstract void sortBYLastName(List<Person> jsondata);
 		abstract void sortBYPincode(List<Person> jsondata);
-		abstract void addPerson(List<Person> jsondata, int num) throws JsonGenerationException, JsonMappingException, IOException;
+		abstract void addPerson(List<Person> jsondata, int num);
 		abstract void display(List<Person> jsondata);
 		abstract void editByFirstName(List<Person> person2);
 		 List<Person> removeByFirstName(List<Person> person2) ;

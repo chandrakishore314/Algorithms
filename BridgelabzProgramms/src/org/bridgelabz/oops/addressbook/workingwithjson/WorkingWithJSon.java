@@ -8,32 +8,22 @@ import java.util.List;
 
 import org.bridgelabz.oops.addressbook.model.Address;
 import org.bridgelabz.oops.addressbook.model.Person;
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.map.JsonMappingException;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import com.google.gson.Gson;
 public class WorkingWithJSon {
 	
 	 JSONParser parser = new JSONParser();
-	 JSONArray jsonArray=new JSONArray(); 
+	 Gson gson=new Gson();
 	 // To write to the json
-	public void writeToJson(List<Person> persons) throws JsonGenerationException, JsonMappingException, IOException {
-JSONObject json = new JSONObject();
-		for(Person p:persons) {
-			json = new JSONObject();
-        json.put("firstname",p.getFirstname());
-        json.put("lastname", p.getLastname());
-        json.put("phonenumber", p.getPhonenumber());
-        json.put("city", p.getAddress().getCity());
-        json.put("state", p.getAddress().getState());
-        json.put("pincode", p.getAddress().getPincode());
-       jsonArray.add(json);
-		}
+	public void writeToJson(List<Person> persons) throws IOException {
+String personsting=gson.toJson(persons);
+
 try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramms/src/org/bridgelabz/oops/addressbook/workingwithjson/address.json")) {
-    file.write(jsonArray.toJSONString());
+    file.write(personsting);
     file.flush();
 } catch (IOException e) {
     e.printStackTrace();
@@ -41,7 +31,7 @@ try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramm
 		
 	}
 	 // To read from the json
-	public List<Person> readInventoryData() throws JsonParseException, JsonMappingException, IOException {
+	public List<Person> readInventoryData() throws IOException {
 		List<Person> jsondata= new ArrayList<Person>();
 		JSONArray jsonArray = null;
 		try {
@@ -56,8 +46,8 @@ try (FileWriter file = new FileWriter("/home/admin1/Programms/BridgelabzProgramm
 				JSONObject jobject = (JSONObject) obj;
 				
 				String firstname= (String) jobject.get("firstname");
-				person.setFirstname(firstname);
-				String lastname= (String) jobject.get("firstname");
+				person.setFirstname(firstname); 
+				String lastname= (String) jobject.get("lastname");
 				person.setLastname(lastname);
 				String phonenumber=(String) jobject.get("phonenumber");
 				person.setPhonenumber(phonenumber);

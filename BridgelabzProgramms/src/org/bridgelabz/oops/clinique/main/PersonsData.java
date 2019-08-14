@@ -73,6 +73,7 @@ public class PersonsData {
 		for (Availability avail : availability) {
 			System.out.println(avail);
 		}
+		
 		for (int i=0;i< doctor.size();i++) {
 			System.out.println(doctor.get(0).getDname()+" "+Collections.frequency(availability, doctor.get(0).getDname()));
 		

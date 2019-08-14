@@ -23,7 +23,7 @@ public class AddresssImplentation implements AdressFunctions {
 	Person man;
 	Address adress;
 	org.bridgelabz.oops.addressbook.workingwithjson.WorkingWithJSon WorkingWithJSon=new org.bridgelabz.oops.addressbook.workingwithjson.WorkingWithJSon();
-	public void addPerson(List<Person> jsondata, int num) throws JsonGenerationException, JsonMappingException, IOException {
+	public void addPerson(List<Person> jsondata, int num) {
 		for (int i = 0; i < num; i++) {
 			adress = new Address();
 			man = new Person();
@@ -49,7 +49,12 @@ public class AddresssImplentation implements AdressFunctions {
 			jsondata.add(man);
 
 		}
-		WorkingWithJSon.writeToJson(jsondata);
+		try {
+			WorkingWithJSon.writeToJson(jsondata);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public void display(List<Person> jsondata) {
