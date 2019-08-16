@@ -10,6 +10,11 @@ public class Utility {
 		Scanner scanner= new Scanner(System.in);
 		return scanner;
 	}
+	public static String getString() {
+		Scanner scanner= new Scanner(System.in);
+		
+		return scanner.next();
+	}
 
 	
 	public static ObjectMapper getObjectMapper() {
