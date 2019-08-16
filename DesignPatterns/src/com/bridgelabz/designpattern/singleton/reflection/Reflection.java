@@ -11,6 +11,7 @@ public class Reflection {
 		Eagerinitialisation instanceone = Eagerinitialisation.getEagerinitialisationInstance();
 		
 		Eagerinitialisation instancetwo=null;
+		
 		Constructor[] constructors=Eagerinitialisation.class.getDeclaredConstructors();
 		for(Constructor constructor:constructors) {
 			constructor.setAccessible(true);
@@ -20,6 +21,7 @@ public class Reflection {
 					| InvocationTargetException e) {
 				e.printStackTrace();
 			}
+			
 		}
 		System.out.println("instance one  "+instanceone);
 		System.out.println("instance two "+instancetwo);
