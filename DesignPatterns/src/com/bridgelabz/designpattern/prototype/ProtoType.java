@@ -1,19 +1,18 @@
 package com.bridgelabz.designpattern.prototype;
 
-import java.util.Scanner;
+import com.bridgelabz.designpattern.util.Utility;
 
 public class ProtoType {
 
 	public static void main(String[] args) {
-Scanner scanner=new Scanner(System.in);
 Employee employee=new Employee();
-	 String ename=scanner.next();
+	 String ename=Utility.getString();
 	 employee.setEname(ename);
-	 String name=scanner.next();
-	 employee.setEname(ename);
-	 int age=scanner.nextInt();
+	 String name=Utility.getString();
+	 employee.setName(name);
+	 int age=Utility.getInt();
 	 employee.setAge(age);
-	 int eid=scanner.nextInt();
+	 int eid=Utility.getInt();
 	 employee.setEid(eid);
 	 
 	 System.out.println(employee);
