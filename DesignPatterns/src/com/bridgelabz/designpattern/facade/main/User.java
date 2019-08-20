@@ -1,4 +1,4 @@
-package com.bridgelabz.designpattern.main;
+package com.bridgelabz.designpattern.facade.main;
 
 import com.bridgelabz.designpattern.util.Utility;
 

@@ -1,4 +1,4 @@
-package com.bridgelabz.designpattern.interfaces;
+package com.bridgelabz.designpattern.facade.interfaces;
 
 public interface MobileShop {
 	public void modelNum();

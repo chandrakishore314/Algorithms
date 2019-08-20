@@ -1,8 +1,8 @@
-package com.bridgelabz.designpattern.main;
+package com.bridgelabz.designpattern.facade.main;
 
-import com.bridgelabz.designpattern.interfaces.Infocus;
-import com.bridgelabz.designpattern.interfaces.MobileShop;
-import com.bridgelabz.designpattern.interfaces.Nokia;
+import com.bridgelabz.designpattern.facade.interfaces.Infocus;
+import com.bridgelabz.designpattern.facade.interfaces.MobileShop;
+import com.bridgelabz.designpattern.facade.interfaces.Nokia;
 
 public class ShopKeeper {
 	
