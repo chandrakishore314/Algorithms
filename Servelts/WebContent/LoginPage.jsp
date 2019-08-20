@@ -5,13 +5,13 @@ body {
 	background-color: DarkSeaGreen;
 }
 </style>
-<form action="/home/admin1/Programms/Servelts/LoginPage.html">
+<form action="loginForm">
 UserName :
 <br>
-<input type="text" name="UserName" />
+<input type="text" name="username" />
 <br> Password :
 <br>
-<input type="text" name="Password" />
+<input type="text" name="password" />
 <br>
 <P style="color: green;">please enter submit button</p><br>
 <input type="submit"  value="submit" style="width: 180px; height: 25px; "/>
