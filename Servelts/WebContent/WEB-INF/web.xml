@@ -5,31 +5,31 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>ServletExample</display-name>
-
 	<welcome-file-list>
-		<welcome-file>/RegistrationPage.html</welcome-file>
+		<welcome-file>/LoginPage.html</welcome-file>
 	</welcome-file-list>
 	<servlet>
 		<servlet-name>RegistrationForm</servlet-name>
 		<servlet-class>com.bridgelabz.loginpage.controller.RegistrationController</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>RegistrationForm</servlet-name>
 		<url-pattern>/helloForm</url-pattern>
 	</servlet-mapping>
-
-
-
-
 	<servlet>
 		<servlet-name>LoginForm</servlet-name>
 		<servlet-class>com.bridgelabz.loginpage.controller.LoginController</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
 		<servlet-name>LoginForm</servlet-name>
 		<url-pattern>/loginForm</url-pattern>
 	</servlet-mapping>
-
+	<servlet>
+		<servlet-name>ProfileController</servlet-name>
+		<servlet-class>com.bridgelabz.loginpage.controller.ProfileController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProfileController</servlet-name>
+		<url-pattern>/ProfileController</url-pattern>
+	</servlet-mapping>
 </web-app>
