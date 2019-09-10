@@ -1,0 +1,7 @@
+(1).Hibernate requires JAXB-Core,JAXB-API,JAXB-runtime
+                       mysql Connector for MySQL DB
+                       ojdbc14 for Oracle DB,
+                       Activation 1.1 .1 jar also requirfed.
+(2).If JAVA 11 ,you are using You need to Add these JAXB,Activatoin 1.1.1 jars                    
+                       
+                      
