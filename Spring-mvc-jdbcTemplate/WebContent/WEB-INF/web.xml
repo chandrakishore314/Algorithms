@@ -9,14 +9,9 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
 	 </init-param>
-    <load-on-startup>0</load-on-startup> 
+    <load-on-startup>2</load-on-startup> 
     </servlet>
-    <context-param>
-		  <param-name>contextClass</param-name>
-            <param-value>
-                org.springframework.web.context.support.XmlWebApplicationContext
-            </param-value>
-	</context-param>
+    
     <servlet-mapping>
         <servlet-name>spring-mvc</servlet-name>
         <url-pattern>/</url-pattern>

@@ -1,5 +1,4 @@
 package org.bridgelabz.application.controller;
-
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
@@ -10,7 +9,6 @@ public class ProfileController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@RequestMapping("/profile")
     public String logout(HttpSession session,ModelAndView modelAndView ) {
-    
 		 modelAndView = new ModelAndView("profile");
 		 modelAndView.addObject("message", "welcome to profile");
        return "profile";
@@ -22,9 +20,6 @@ public class ProfileController extends HttpServlet {
     }
 	@RequestMapping("/welcome")
     public String viewWelcome(HttpSession session,ModelAndView modelAndView ) {
-	//	 modelAndView = new ModelAndView("welcome");
-		// modelAndView.addObject("username", username);	
        return "welcome";
     }
-   
 }
