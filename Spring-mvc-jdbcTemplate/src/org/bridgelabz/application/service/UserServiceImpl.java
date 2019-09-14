@@ -14,7 +14,7 @@ public class UserServiceImpl {
 	public int doRegistration(Student student) {
 		System.out.println(" entered into service layer");
 		
-	return eDAO.saveEmployee(student);
+	return eDAO.saveStudent(student);
 	}
 	public int doLogin(Login login){
 		System.out.println(" entered into service layer"+eDAO);

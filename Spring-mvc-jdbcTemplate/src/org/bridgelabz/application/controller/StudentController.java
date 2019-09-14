@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 @Controller
-public class RegistrationController {
+public class StudentController {
 	
 	@Autowired
 	UserServiceImpl userServiceImpl;
 	int count = 0;
-	//UserServiceImpl userServiceImpl=new UserServiceImpl();
 // To save new user registration details in the DataBase
 	@RequestMapping("/registrationDAO")
 	public ModelAndView doregistration(@ModelAttribute Student student) {
@@ -30,14 +29,14 @@ public class RegistrationController {
 	}
 	// To view into the registration page
 	@RequestMapping("/registrationPageView")
-	public String registration() {
+	public String registrationpage() {
 		System.out.println("entered into registration view");
 		String name = "registration";
 		return name;
 	}
 	// To view into the login page
 	@RequestMapping("/loginPageview")
-	public String register() {
+	public String viewLoginPage() {
 		String name = "LoginPage";
 		System.out.println("entered into log in page");
 		return name;
@@ -46,6 +45,7 @@ public class RegistrationController {
 	@RequestMapping(value = "/loginController")
 	public ModelAndView userRegistration(@ModelAttribute Login login) {
 		String epass = Utility.encryptPasswors(login.getPassword());
+		login.setPassword(epass);
 		ModelAndView modelAndView = null;
 		System.out.println("before dao " + login.getUserName());
 		int count=0;
@@ -59,9 +59,11 @@ public class RegistrationController {
 			}
 		 else {
 			 modelAndView= new ModelAndView("LoginPage");
+			 modelAndView.addObject("message","enter the correct password");
 		}
 		return modelAndView;
 	}
+	//To enter into  the enteremail page
 	@RequestMapping("/forgotpassword")
 	public String forgotpassword() {
 		return "enteremail";
@@ -70,11 +72,12 @@ public class RegistrationController {
 	String resetemail = null;
 	String mailsentpassword=null;
 	@RequestMapping("/resetController")
-	public String enterEmail(HttpServletRequest req) {
+	public String resetPassword(HttpServletRequest req) {
 		resetemail= req.getParameter("email");
 		mailsentpassword = Utility.sendMsg(resetemail);
 		return "resetpassword";
 	}
+	//To update the password
 	@RequestMapping("/updatePassword")
 	public ModelAndView updatePassword(HttpServletRequest req,ModelAndView modelAndView) {
 		resetpass=req.getParameter("emailsentpassword");
