@@ -7,6 +7,8 @@ public interface UserRepository {
 	
 void save(User user);
 List<User> getListOfUsers();
+List<User> getId(String email);
+void updateVerify(int id);
 
 	
 }

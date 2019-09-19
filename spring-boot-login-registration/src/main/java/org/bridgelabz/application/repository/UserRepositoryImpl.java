@@ -29,5 +29,23 @@ public class UserRepositoryImpl implements UserRepository{
 		System.out.println("list of userdetails  "+ list);
 		return list;
 	}
+
+public  List<User> getId(String email) {
+	Session currentSession = entityManager.unwrap(Session.class);
+	  Query query =  currentSession.createQuery(" from User WHERE username=:email");
+	 query.setParameter("email", email);
+	  List<User> list = query.list();
+	return list;
+}
+
+@Override
+public void updateVerify(int id) {
+	Session currentSession = entityManager.unwrap(Session.class);
+	String qryString3 = "update User set isverified=true where id=:sId";
+    Query query3 = currentSession.createQuery(qryString3);
+    query3.setParameter("sId", id);
+    query3.executeUpdate();
+}
+	
 	
 }

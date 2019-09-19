@@ -1,5 +1,6 @@
 package org.bridgelabz.application.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.bridgelabz.application.configuration.UserConfiguration;
@@ -7,6 +8,7 @@ import org.bridgelabz.application.model.LoginDTO;
 import org.bridgelabz.application.model.User;
 import org.bridgelabz.application.model.UserDTO;
 import org.bridgelabz.application.repository.UserRepository;
+import org.bridgelabz.application.tokenimpl.TokenImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -20,8 +22,14 @@ public class UserServiceImpl implements UserService{
 	UserRepository userRepository;
 	@Autowired
 	UserConfiguration userConfiguration;
-	@Autowired
+	@Autowired	
     private JavaMailSender javaMailSender;
+	@Autowired
+	TokenImpl tokenImple;
+	
+	/*
+	 * @Autowired private SimpleMailMessage msg;
+	 */
 	
 //To save the user details in the DATABASE
 	@Transactional
@@ -30,13 +38,20 @@ public class UserServiceImpl implements UserService{
 		 ModelMapper modelMapper =userConfiguration.getModelMapper();
 		 User user1 = modelMapper.map(userdto, User.class);
 		 user1.setPassword(userConfiguration.bCryptPasswordEncoder().encode(user1.getPassword()));
+		 user1.setDate(LocalDateTime.now().toString() );
 		 userRepository.save(user1);
-		 SimpleMailMessage msg = new SimpleMailMessage();
-	        msg.setTo("chandrakishore314@gmail.com");
-
+		 
+		 int id=0;
+		 List<User>  listofusers=userRepository.getId(user1.getUsername());
+		 for(User user:listofusers) {
+			 id =user.getUserId();
+		 }
+		String token =tokenImple.jwtToken(id);
+		String url="http://localhost:8085/verify?token="+token;
+	 SimpleMailMessage msg = new SimpleMailMessage();
+	        msg.setTo(user1.getUsername());
 	        msg.setSubject("Testing from Spring Boot");
-	        msg.setText("Hello World \n Spring Boot Email");
-
+	        msg.setText("click this url to verify Your email  "+url);
 	        javaMailSender.send(msg);
 	}
 
@@ -48,11 +63,21 @@ public class UserServiceImpl implements UserService{
 		BCryptPasswordEncoder encoder = userConfiguration.bCryptPasswordEncoder();
 		System.out.println(loginDTO.getPassword());
 		for(User user:listofusers) {
-			if(loginDTO.getEmail().equals(user.getEmail()) && encoder.matches(loginDTO.getPassword(), user.getPassword())) {
+			if(loginDTO.getUsername().equals(user.getUsername()) && encoder.matches(loginDTO.getPassword(), user.getPassword())) {
 				count=1;
 			}
 		}
 		return count;
 	}
 
+	//To upadate the User is verified
+	@Transactional
+	public boolean verifyuser(String token) {
+		int id=tokenImple.parseJWT(token);
+		
+		userRepository.updateVerify(id);
+		return false;
+		
+	}
+	
 }
