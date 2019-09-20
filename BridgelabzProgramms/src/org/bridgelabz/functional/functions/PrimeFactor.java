@@ -12,7 +12,6 @@ public class PrimeFactor {
 		int n = scanner.nextInt();
 		primeFactors(n);
 		scanner.close();
-
 	}
 
 	// To print the prime factors of value n

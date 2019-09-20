@@ -3,7 +3,6 @@ package org.bridgelabz.functional.functions;
 import java.util.Scanner;
 
 public class DistinctCoupon {
-
 	public static void main(String[] args) {
 	int distinct=0,value,count = 0;
 		Scanner scanner = new Scanner(System.in);

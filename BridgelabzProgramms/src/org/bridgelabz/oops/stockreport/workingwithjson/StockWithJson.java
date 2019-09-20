@@ -36,7 +36,7 @@ public class StockWithJson {
 		    file.write(jsonString);
 		    file.flush();
 
-		} catch (IOException e) {
+		} catch (IOException e) { 
 		    e.printStackTrace();
 		}
 	}

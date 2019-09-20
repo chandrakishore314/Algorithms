@@ -3,13 +3,13 @@ package org.bridgelabz.datastructures.primenumbers;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import org.bridgelabz.functional.utility.algorithms.UtilityAlgorithms;
+import org.bridgelabz.programms.utility.Utility;
 
 public class PrimeNumbers {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> primes = new ArrayList<Integer>();
-		primes = UtilityAlgorithms.PrimeNumbers(1000);
+		primes = Utility.PrimeNumbers(1000);
 		UtilityPrimesDispaly u=new UtilityPrimesDispaly();
 		ArrayList<Integer> anagrams=u.anagrams(primes);
 		

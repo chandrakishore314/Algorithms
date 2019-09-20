@@ -11,11 +11,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-import org.bridgelabz.functional.utility.Utility;
 import org.bridgelabz.oops.inventory.interfaces.Inventoryinterface;
 import org.bridgelabz.oops.inventory.model.Inventorry;
+import org.bridgelabz.programms.utility.InputScanner;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -25,20 +24,18 @@ import com.google.gson.Gson;
 
 public class InventoryImplementation implements Inventoryinterface {
 	
-	Scanner scanner = Utility.getScanner();
-	
 	public void add() {
 		List<Inventorry> inventories = readInventoryData();
 		System.out.println(" enter number of inventories to enter");
-		int num=scanner.nextInt();
+		int num=InputScanner.getInt();
 		
 		for (int i = 0; i < num; i++) {
 			System.out.println("enter name ");
-			String name = scanner.next();
+			String name = InputScanner.getString();
 			System.out.println("enter weight ");
-			long weight = scanner.nextLong();
+			long weight = InputScanner.getInt();
 			System.out.println("enter price ");
-			long price = scanner.nextLong();
+			long price = InputScanner.getLong();
 			Inventorry inventorry = new Inventorry();
 			inventorry.setName(name);
 			inventorry.setWeight(weight);

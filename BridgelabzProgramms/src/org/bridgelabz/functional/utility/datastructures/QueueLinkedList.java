@@ -1,11 +1,9 @@
 package org.bridgelabz.functional.utility.datastructures;
 
-
-
-
 public class QueueLinkedList<T> {
 	Node<T> head;
 	int current = 0;
+	
 	public void push(T data) {
 		Node<T> temp;
 		Node<T> node = new Node<T>(data);
@@ -21,27 +19,27 @@ public class QueueLinkedList<T> {
 		}
 		current++;
 	}
+	
 	public int size() {
 		return current;
 	}
+	
 	public boolean isEmpty() {
-		
-		if (current == 0) {
+		if(current == 0) {
 			return true;
 		} else {
 			return false;
 		}
 	}
+	
 	public T remove() {
 		if (isEmpty()) {
 			System.out.println("Underflow");
 		}
 		Node<T> temp = head;
-		
 		if (head.next != null) {
 			head = temp.next;
 		}
-		
 		return temp.data;
 	}
 }

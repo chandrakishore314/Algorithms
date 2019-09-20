@@ -103,8 +103,8 @@ boolean isEmpty(){
 	return length==0;
 	
 }
-//printing the Data
 
+//printing the Data
 public void printList(String s) throws IOException {
 	Node<T> currentNode = head;
 	
@@ -115,9 +115,6 @@ public void printList(String s) throws IOException {
 		fw.write(" ");
 		currentNode=currentNode.next;
 	}
-
 	fw.close();
 }
-
-
 }

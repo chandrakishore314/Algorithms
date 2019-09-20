@@ -1,5 +1,5 @@
 package org.bridgelabz.functional.utility.datastructures;
-import org.bridgelabz.functional.utility.datastructures.Node;;
+import org.bridgelabz.functional.utility.datastructures.Node;
 
 
 public class StackLinkedList<T> {
@@ -11,7 +11,6 @@ public class StackLinkedList<T> {
 		if (top == null) {
 			top=temp;
 		} else {
-			
 		        temp.next = top; 
 		        top = temp;
 		}

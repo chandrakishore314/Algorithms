@@ -1,7 +1,7 @@
 package org.bridgelabz.datastructures;
 
-import org.bridgelabz.algorithms.DayOfWeek;
 import org.bridgelabz.functional.functions.LeapYear;
+import org.bridgelabz.programms.utility.Utility;
 
 public class Calender {
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Calender {
 		}
 		System.out.println(months[month - 1] + " " + year);
 		System.out.println("S  M  T  W  Th  F  S ");
-		int d = DayOfWeek.day(month, 1, year);
+		int d = Utility.day(month, 1, year);
 		for (int i = 0; i <= d; i++) {
 			System.out.print("  ");
 		}

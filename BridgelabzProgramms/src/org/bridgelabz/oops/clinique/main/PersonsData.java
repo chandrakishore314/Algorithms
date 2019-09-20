@@ -8,15 +8,15 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
-import org.bridgelabz.functional.utility.Utility;
 import org.bridgelabz.oops.clinique.interfaceimpl.DataImplementation;
 import org.bridgelabz.oops.clinique.interfaces.CliniqueInterfaces;
 import org.bridgelabz.oops.clinique.model.Availability;
 import org.bridgelabz.oops.clinique.model.Doctor;
 import org.bridgelabz.oops.clinique.model.Patient;
 import org.bridgelabz.oops.clinique.workingwithjson.WorkingCliniqueJson;
+import org.bridgelabz.programms.utility.InputScanner;
+import org.bridgelabz.programms.utility.Utility;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 
@@ -25,11 +25,10 @@ public class PersonsData {
 
 		CliniqueInterfaces cliniqueInterfaces= new DataImplementation();
 		System.out.println("enter number of patients  data to enter");
-		Scanner scanner = Utility.getScanner();
-		int number = scanner.nextInt();
+		int number = InputScanner.getInt();
 		cliniqueInterfaces.addPerson(number);
 		System.out.println("enter number of Doctors  data to enter");
-		int dnumber = scanner.nextInt();
+		int dnumber =InputScanner.getInt();
 		cliniqueInterfaces.addDoctors(dnumber);
 		// working with json Data
 		WorkingCliniqueJson workingCliniqueJson = new WorkingCliniqueJson();
@@ -45,7 +44,7 @@ public class PersonsData {
 			Availability a = new Availability();
 			a.setPatient(p);
 			System.out.println("patient enter doctor name ");
-			doctorname = scanner.next();
+			doctorname = InputScanner.getString();
 			for (Doctor d : doctor) {
 				if (d.getDname().equals(doctorname)) {
 					a.setDoctor(d);

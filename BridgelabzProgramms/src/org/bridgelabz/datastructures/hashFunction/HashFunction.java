@@ -1,15 +1,15 @@
 package org.bridgelabz.datastructures.hashFunction;
 import java.io.IOException;
 
-import org.bridgelabz.algorithms.Bubblesort;
 import org.bridgelabz.datastructures.ordereslinkedlist.OrderedLikedList;
 import org.bridgelabz.functional.utility.datastructures.LinkedList;
+import org.bridgelabz.programms.utility.Utility;
 
 public class HashFunction {
 	public static void main(String[] args) throws IOException {
 	
 		int arr[] = OrderedLikedList.fileInput();
-		Bubblesort.sort(arr);
+		Utility.sort(arr);
 		hashFunction(arr);
 	}
 	private static void hashFunction(int[] arr) throws IOException {

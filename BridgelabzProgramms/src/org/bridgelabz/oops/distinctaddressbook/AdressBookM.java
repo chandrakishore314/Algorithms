@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelabz.functional.utility.Utility;
+import org.bridgelabz.programms.utility.Utility;
 import org.codehaus.jackson.map.ObjectMapper;
 
 public class AdressBookM {

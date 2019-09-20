@@ -1,9 +1,9 @@
 package org.bridgelabz.datastructures;
 
-import org.bridgelabz.algorithms.DayOfWeek;
 import org.bridgelabz.functional.functions.LeapYear;
 import org.bridgelabz.functional.utility.datastructures.QueueLinkedList;
 import org.bridgelabz.functional.utility.datastructures.StackLinkedList;
+import org.bridgelabz.programms.utility.Utility;
 public class CalenderUsingStack {
 	public static void main(String[] args) {
 		int month = Integer.parseInt(args[0]);
@@ -16,7 +16,7 @@ public class CalenderUsingStack {
 		}
 		System.out.println(months[month - 1] + " " + year);
 		System.out.println("S    M   T   W    Th    F    S ");
-		int d = DayOfWeek.day(month, 1, year);
+		int d = Utility.day(month, 1, year);
 		StackLinkedList<QueueLinkedList<Integer>> q = new StackLinkedList<QueueLinkedList<Integer>>();
 		QueueLinkedList<Integer> week = new QueueLinkedList<Integer>();
 

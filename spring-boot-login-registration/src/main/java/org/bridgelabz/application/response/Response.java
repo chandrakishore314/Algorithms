@@ -6,11 +6,13 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Response {
-	private String str;
-	private int num;
-	public Response(String str,int num){
-		this.num=num;
-		this.str=str;
-		}
-	
+
+	private String message;
+	private int statusCode;
+
+	public Response(String message, int statusCode) {
+		this.statusCode = statusCode;
+		this.message = message;
+	}
+
 }

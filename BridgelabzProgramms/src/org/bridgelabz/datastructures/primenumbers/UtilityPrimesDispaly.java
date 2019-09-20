@@ -7,6 +7,20 @@ import org.bridgelabz.functional.utility.datastructures.StackLinkedList;
 public class UtilityPrimesDispaly {
 	void display(ArrayList<Integer> primes) {
 		int array[][] = new int[10][100];
+		int b[][]=new int[10][100];
+		int min=0,max=100,r=0;
+		for (int i = 1; i < max; i++) {
+			if (r >= min && r <= max) {
+				i++;
+				b[i][r] = primes.get(i);
+			} else {
+				min += 100;
+				max += 100;
+				i += 1;
+				r = 0;
+				b[i][r] = primes.get(i);
+			}
+		}
 		int prev = 0, curret = 100, j = 0, k = 0;
 		for (int i = 0; i < primes.size(); i++) {
 			if (primes.get(i) >= prev && primes.get(i) <= curret) {
@@ -20,14 +34,26 @@ public class UtilityPrimesDispaly {
 				array[j][k] = primes.get(i);
 			}
 		}
+		int s1 = 0,hero=100;
 		for (int k1 = 0; k1 < 10; k1++) {
+			for ( s1 = 0; s1 < hero; s1++) {
+				System.out.println(b[k1][s1]);
+				
+				
+				
+			}
+			
+			
 			for (int j1 = 0; j1 < 100; j1++) {
 				if (array[k1][j1] != 0) {
 					System.out.print(array[k1][j1] + " ");
 				}
 			}
 			System.out.println();
+			s1=s1+100;
+			hero=hero+100;
 		}
+		
 	}
 
 	public ArrayList<Integer> anagrams(ArrayList<Integer> primes) {

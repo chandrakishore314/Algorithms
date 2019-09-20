@@ -10,7 +10,6 @@ public class LeapYear {
         int year = s.nextInt();
         boolean flag = false;
         flag= find(year);
-       
                 if(flag)
         {
             System.out.println("Year "+year+" is a Leap Year");
@@ -21,9 +20,7 @@ public class LeapYear {
         }
                 s.close();
 	}
-
 	public static boolean find(int year) {
-		// TODO Auto-generated method stub
 		boolean flag = false;
        
         if(year % 400 == 0)
@@ -37,15 +34,11 @@ public class LeapYear {
         else if(year % 4 == 0)
         {
             flag = true;
-         
         }
         else
         {
             flag = false;
         }
 		return flag;
-        
-
 	}
-
 }

@@ -10,25 +10,21 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-import org.bridgelabz.functional.utility.Utility;
 import org.bridgelabz.oops.stockreport.interfaceimpl.StockImplementation;
 import org.bridgelabz.oops.stockreport.interfaces.StockInterfaces;
 import org.bridgelabz.oops.stockreport.model.Stock;
 import org.bridgelabz.oops.stockreport.workingwithjson.StockWithJson;
+import org.bridgelabz.programms.utility.InputScanner;
+import org.bridgelabz.programms.utility.Utility;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 
 public class StockList {
 
 	public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException {
-		Scanner scanner = Utility.getScanner();
-		StockInterfaces  stock = new StockImplementation();
-	
-		
 
+		StockInterfaces stock = new StockImplementation();
 		StockWithJson stockWithJson = new StockWithJson();
-		
-
 		double totalprice = 0;
 		List<Stock> stockObjects = stockWithJson.readFromJson();
 		for (Stock stock1 : stockObjects) {
@@ -37,15 +33,15 @@ public class StockList {
 			totalprice = totalprice + value;
 		}
 		System.out.println("Total Stock Value  " + totalprice);
-		int choice = 0,choice1 = 10;
-do {
+		int choice = 0, choice1 = 10;
+		do {
 			System.out.println(" enter 1.To add new Account to File 2. To get value of any stock\n"
-					                + "3. To Buy    4. To sell  5. To save to File  6. To print Stock Report"
-					                + "7.Add the Transaction to json 8.. exit");
-			choice = scanner.nextInt();
+					+ "3. To Buy    4. To sell  5. To save to File  6. To print Stock Report"
+					+ "7.Add the Transaction to json 8.. exit");
+			choice = InputScanner.getInt();
 			switch (choice) {
 			case 1:
-				stockObjects = stock.addStocks(1,stockObjects);
+				stockObjects = stock.addStocks(1, stockObjects);
 				break;
 			case 2:
 				stock.valueOf(stockObjects);
@@ -63,12 +59,12 @@ do {
 				stock.addTransactiontoJson();
 				break;
 			case 8:
-				choice1=0;
+				choice1 = 0;
 				break;
 			default:
 				System.out.println("enter valid between 0 - 7");
 				break;
 			}
-		}while(choice1==10);
+		} while (choice1 == 10);
 	}
 }
